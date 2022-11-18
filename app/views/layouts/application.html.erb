@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+
   <div class="bg-white">
   <header>
     <div class="relative bg-white border-b border-red-400">
@@ -46,18 +48,26 @@
             Learning Materials
           </a>
         </nav>
-        <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-          <a href="#" class="ml-8 inline-flex items-center justify-center whitespace-nowrap
-          rounded-md border border-transparent bg-red-600
-          bg-origin-border px-4 py-2 text-sm font-small text-white shadow-sm
-          hover:bg-red-700">Sign up</a>
+        <% if user_signed_in? %>
 
-          <a href="#" class="whitespace-nowrap text-sm font-small text-gray-500
-          hover:text-red-700 ml-8">Sign
-            in</a>
-        </div>
+          <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+            <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "whitespace-nowrap text-sm font-small text-gray-500
+            hover:text-red-700 ml-8" %>
+          </div>
+        <% else %>
+          <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+            <a href="/users/sign_up" class="ml-8 inline-flex items-center justify-center whitespace-nowrap
+            rounded-md border border-transparent bg-red-600
+            bg-origin-border px-4 py-2 text-sm font-small text-red shadow-sm
+            hover:bg-red-700">Sign up</a>
+
+            <a href="/users/sign_in" class="whitespace-nowrap text-sm font-small text-gray-500
+            hover:text-red-700 ml-8">Sign
+              in</a>
+          </div>
+        <% end %>
       </div>
-
+      
       <!--
         Mobile menu, show/hide based on mobile menu state.
 
@@ -150,6 +160,8 @@
   </header>
 
   <main>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </main>
 
