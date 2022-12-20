@@ -1,0 +1,38 @@
+name: Arc Platform CI Workflow
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      db:
+        image: postgres:11@sha256:85d79cba2d4942dad7c99f84ec389a5b9cc84fb07a3dcd3aff0fb06948cdc03b
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Ruby 3.0.2
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0.2' # Not needed with a .ruby-version file
+          bundler-cache: true
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install --ignore-engines
+      - name: Build and run tests
+        env:
+          DATABASE_URL: postgres://postgres:@localhost:5432/test
+          #POSTGRES_PASSWORD: postgres
+          RAILS_ENV: test
+          #RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+        run: |
+          sudo apt-get -yqq install libpq-dev
+          gem install bundler
+          bundle install --jobs 4 --retry 3
+          bundle exec rails db:prepare
+          bundle exec rails test
+
