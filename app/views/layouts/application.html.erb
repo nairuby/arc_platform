@@ -34,7 +34,8 @@
           </div>
           <nav class="hidden space-x-10 md:flex">
             <a href="#" class="text-sm font-small text-gray-500 hover:text-red-600">Home</a>
-            <a href="#" class="text-sm font-small text-gray-500 hover:text-red-600">About</a>
+            <%= link_to 'About', landing_about_path,
+                        class: "text-sm font-small text-gray-500 hover:text-red-600" %>
             <a href="#" class="text-sm font-small text-gray-500 hover:text-red-600">Events</a>
             <a href="#" class="text-sm font-small text-gray-500 hover:text-red-600">
               Conferences
