@@ -33,15 +33,46 @@
     <div class="basis-1/6">
       <ul>
         <li>
-          <%= link_to 'Twitter', '#' %></li>
+          <%= link_to '#' do %>
+            <div class="inline-flex text-sm">
+              <div class="pr-4 self-center">
+                <%= image_tag image_path('brands_twitter.png'), class: "w-5" %>
+              </div>
+              Twitter
+            </div>
+          <% end %>
+        </li>
         <li>
-          <%= link_to 'Telegram', '#' %></li>
+          <%= link_to '#' do %>
+            <div class="inline-flex text-sm">
+              <div class="pr-4 self-center">
+                <%= image_tag image_path('brands_telegram.png'), class: "w-5" %>
+              </div>
+              Telegram
+            </div>
+          <% end %>
+        </li>
         <li>
-          <%= link_to 'Facebook', '#' %></li>
         <li>
-          <%= link_to 'Chapters', '#' %></li>
+          <%= link_to '#' do %>
+            <div class="inline-flex text-sm">
+              <div class="pr-4 self-center">
+                <%= image_tag image_path('brands_facebook.png'), class: "w-5" %>
+              </div>
+              Facebook
+            </div>
+          <% end %>
+        </li>
         <li>
-          <%= link_to 'Instagram', '#' %></li>
+          <%= link_to '#' do %>
+            <div class="inline-flex text-sm">
+              <div class="pr-4 self-center">
+                <%= image_tag image_path('brands_instagram.png'), class: "w-5" %>
+              </div>
+              Instagram
+            </div>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
