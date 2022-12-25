@@ -18,10 +18,10 @@
         <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6
       md:justify-start md:space-x-10 lg:px-8">
           <div class="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
+            <%= link_to root_path do %>
               <span class="sr-only">African Ruby Community</span>
               <%= image_tag 'arc_logo_coloured.png', class: "h-8 w-auto sm:h-7" %>
-            </a>
+            <% end %>
           </div>
           <div class="-my-2 -mr-2 md:hidden">
             <button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
@@ -156,7 +156,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="min-h-fit">
       <%= yield %>
     </main>
 
