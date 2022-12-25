@@ -1,0 +1,50 @@
+<footer aria-labelledby="footer-heading">
+  <div class="flex flex-row pt-32">
+    <div class="basis-2/6">
+      <%= link_to '#', class: "flex justify-end pr-20" do %>
+        <%= image_tag image_path('arc_dark_gray_logo.png'), class: 'w-40' %>
+      <% end %>
+    </div>
+
+    <div class="basis-1/6">
+      <ul>
+        <li><%= link_to 'Home', '#' %></li>
+        <li><%= link_to 'Events', '#' %></li>
+        <li><%= link_to 'Conferences', '#' %></li>
+        <li><%= link_to 'Chapters', '#' %></li>
+        <li><%= link_to 'Projects', '#' %></li>
+      </ul>
+    </div>
+    <div class="basis-1/6">
+      <ul>
+        <li>
+          <%= link_to 'Learning materials', '#' %></li>
+        <li><%= link_to 'Members', '#' %></li>
+        <li><%= link_to 'About', '#' %></li>
+        <li><%= link_to 'Contact Us', '#' %></li>
+        <li><%= link_to 'Code of conduct', '#' %></li>
+      </ul>
+    </div>
+    <div class="basis-1/6">
+      <ul>
+        <li><%= link_to 'Sponsor', '#' %></li>
+      </ul>
+    </div>
+    <div class="basis-1/6">
+      <ul>
+        <li>
+          <%= link_to 'Twitter', '#' %></li>
+        <li>
+          <%= link_to 'Telegram', '#' %></li>
+        <li>
+          <%= link_to 'Facebook', '#' %></li>
+        <li>
+          <%= link_to 'Chapters', '#' %></li>
+        <li>
+          <%= link_to 'Instagram', '#' %></li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="text-center pt-10 pb-10">All Rights Reserved. Copyright <%= Date.today.year %></p>
+</footer>
