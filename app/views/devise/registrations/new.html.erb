@@ -5,37 +5,24 @@
     </figure>
     <div class="card-body">
       <h2 class="card-title">Create an account</h2>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
 
-        <div class="field">
-          <%= f.label :email %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-        </div>
+      <%= simple_form_for(resource, as: resource_name,
+                          url: registration_path(resource_name)) do |f| %>
+        <%= f.input :email, placeholder: 'Enter email address', label: 'Email',
+                    input_html: { class: 'w-full', autocomplete: 'email' } %>
 
-        <div class="field">
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-            <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "new-password" %>
-        </div>
+        <%= f.input :password, placeholder: 'Enter password', label: 'Password' %>
 
-        <div class="field">
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-        </div>
-        
-        <div class="card-actions justify-end">
-          <%= f.submit "Register", class: "btn btn-primary" %>
+        <%= f.input :password_confirmation, placeholder: 'Confirm Password',
+                    label: 'Confirm Password' %>
+
+        <div class="card-actions justify-end pt-8">
+          <%= f.button :button, 'Create Account', class: 'btn btn-primary' %>
         </div>
       <% end %>
+
+      <div class="divider"></div>
+      <%= render "devise/shared/links" %>
     </div>
   </div>
 </div>
-
-<h2>Sign up</h2>
-
-
-
-<%= render "devise/shared/links" %>
