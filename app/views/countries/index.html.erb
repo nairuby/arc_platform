@@ -1,14 +1,35 @@
-<p style="color: green"><%= notice %></p>
+<div class="container pt-10">
+  <h1 class="text-4xl pt-6 pb-16 font-bold">
+    Countries
+  </h1>
 
-<h1>Countries</h1>
+  <div class="overflow-x-auto">
+    <div class="flex justify-end pb-6">
+      <%= link_to 'New country', new_country_path, class: "btn btn-primary btn-sm",
+                  data: { turbo_frame: dom_id(Country.new) } %>
+    </div>
 
-<div id="countries">
-  <% @countries.each do |country| %>
-    <%= render country %>
-    <p>
-      <%= link_to "Show this country", country %>
-    </p>
-  <% end %>
+    <table class="table table-zebra w-full">
+      <tr>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </table>
+    <%= turbo_frame_tag Country.new %>
+    <%= turbo_frame_tag :countries do %>
+      <% @countries.each do |country| %>
+        <%= turbo_frame_tag country do %>
+          <table class="table table-zebra w-full">
+            <tr>
+              <td><%= country.name %></td>
+              <td>
+                <%= link_to 'Edit', edit_country_path(country) %>
+                <%= button_to 'Delete', country, method: :delete, data: { turbo_frame: "_top" } %>
+              </td>
+            </tr>
+          </table>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New country", new_country_path %>

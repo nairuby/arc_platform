@@ -25,8 +25,9 @@ class CountriesController < ApplicationController
 
     respond_to do |format|
       if @country.save
-        format.html { redirect_to country_url(@country), notice: "Country was successfully created." }
+        format.html { redirect_to countries_url, notice: "Country was successfully created." }
         format.json { render :show, status: :created, location: @country }
+        format.turbo_stream
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @country.errors, status: :unprocessable_entity }
@@ -38,8 +39,9 @@ class CountriesController < ApplicationController
   def update
     respond_to do |format|
       if @country.update(country_params)
-        format.html { redirect_to country_url(@country), notice: "Country was successfully updated." }
+        format.html { redirect_to countries_url, notice: "Country was successfully updated." }
         format.json { render :show, status: :ok, location: @country }
+        format.turbo_stream
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @country.errors, status: :unprocessable_entity }
@@ -54,6 +56,7 @@ class CountriesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to countries_url, notice: "Country was successfully destroyed." }
       format.json { head :no_content }
+      format.turbo_stream
     end
   end
 

@@ -1,0 +1,11 @@
+<%= turbo_frame_tag country do %>
+  <table class="table table-zebra w-full">
+    <tr>
+      <td><%= country.name %></td>
+      <td>
+        <%= link_to 'Edit', edit_country_path(country) %>
+        <%= button_to 'Delete', country, method: :delete, data: { turbo_frame: "_top" } %>
+      </td>
+    </tr>
+  </table>
+<% end %>
