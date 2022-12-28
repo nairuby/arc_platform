@@ -6,7 +6,7 @@
   <div class="overflow-x-auto">
     <div class="flex justify-end pb-6">
       <%= link_to 'New country', new_country_path, class: "btn btn-primary btn-sm",
-                  data: { turbo_frame: dom_id(Country.new) } %>
+                  data: { turbo_frame: Country.new } %>
     </div>
 
     <table class="table table-zebra w-full">
