@@ -6,4 +6,17 @@
     .turbo-progress-bar {
         background: linear-gradient(to right, hsl(var(--p)), hsl(var(--b1)));
     }
+
+    @keyframes appear-then-fade {
+        0%, 100% {
+            opacity: 0
+        }
+        5%, 60% {
+            opacity: 1
+        }
+    }
+
+    .alert_custom_class {
+        animation: appear-then-fade 6s both;
+    }
 }
