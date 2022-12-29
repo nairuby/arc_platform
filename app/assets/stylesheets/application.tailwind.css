@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    :root {
+    /*  Override colors and other variables  */
+    }
+}
+
 @layer components {
     .turbo-progress-bar {
         background: linear-gradient(to right, hsl(var(--p)), hsl(var(--b1)));
