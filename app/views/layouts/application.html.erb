@@ -57,11 +57,15 @@
             </div>
           <% else %>
             <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-              <button class="btn btn-sm btn-primary normal-case">Sign up</button>
+              <%= link_to new_user_registration_path do %>
+                <button class="btn btn-sm btn-primary normal-case">Sign up</button>
+              <% end %>
 
-              <a href="/users/sign_in" class="whitespace-nowrap text-sm font-small text-gray-500
-            hover:text-red-700 ml-8">Sign
-                in</a>
+              <%= link_to new_user_session_path,
+                          class: "whitespace-nowrap text-sm font-small text-gray-500
+                          hover:text-red-700 ml-8" do %>
+                Sign in
+              <% end %>
             </div>
           <% end %>
         </div>
@@ -161,6 +165,7 @@
       <%= yield %>
     </main>
 
+    <%= render 'layouts/flash_messages' %>
     <%= render 'layouts/footer' %>
   </div>
 </div>
