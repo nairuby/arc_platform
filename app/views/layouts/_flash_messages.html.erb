@@ -1,0 +1,13 @@
+<div class="toast toast-top toast-end">
+  <% if notice %>
+    <div class="alert alert-success">
+      <div><%= content_tag :span, notice %></div>
+    </div>
+  <% end %>
+
+  <% if alert %>
+    <div class="alert alert-error">
+      <div><%= content_tag :span, alert %></div>
+    </div>
+  <% end %>
+</div>
