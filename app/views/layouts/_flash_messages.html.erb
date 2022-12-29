@@ -1,6 +1,9 @@
 <div class="toast toast-top toast-end">
   <% if notice || alert %>
-    <div class="alert alert-<%= notice ? 'success' : 'error' %> alert_custom_class">
+    <%= content_tag :div,
+                    class: "alert #{ alert ? 'alert-error' : 'alert-success'} alert_custom_class",
+                    data: { controller: 'removals', action: 'animationend->removals#remove' } do %>
+
       <!--  Display flash icon on the left-->
       <% if notice %>
         <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6"
@@ -16,6 +19,6 @@
       <% end %>
 
       <div><%= content_tag :span, notice || alert %></div>
-    </div>
+    <% end %>
   <% end %>
 </div>
