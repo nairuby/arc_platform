@@ -162,13 +162,12 @@
     </header>
 
     <main style="min-height: 45vh">
-      <div class="flash_messages">
-        <%= render 'layouts/flash_messages' %>
-      </div>
-
       <%= yield %>
     </main>
 
+    <div class="flash_messages">
+      <%= render 'layouts/flash_messages' %>
+    </div>
     <%= render 'layouts/footer' %>
   </div>
 </div>
