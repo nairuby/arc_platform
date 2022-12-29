@@ -25,4 +25,8 @@
     .alert_custom_class {
         animation: appear-then-fade 6s both;
     }
+
+    .text-error {
+        color: hsl(var(--er)/var(--tw-border-opacity));
+    }
 }

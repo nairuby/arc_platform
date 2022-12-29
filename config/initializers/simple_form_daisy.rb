@@ -59,9 +59,10 @@ SimpleForm.setup do |config|
     b.optional :readonly
     b.wrapper :label, tag: 'label', class: 'label' do |lb|
       lb.use :label_text, wrap_with: { tag: 'span', class: 'label-text' }
+      lb.use :full_error, wrap_with: { tag: 'span', class: 'label-text-alt text-error' }
     end
-    b.use :input, class: %w(input input-bordered), error_class: 'input-error', valid_class: 'is-valid'
-    b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
+    b.use :input, class: 'input input-bordered', error_class: 'input-error', valid_class: 'is-valid'
+    # b.use :full_error, wrap_with: { tag: 'div', class: 'invalid-feedback' }
     b.use :hint, wrap_with: { tag: 'small', class: 'form-text text-muted' }
   end
 
