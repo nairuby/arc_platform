@@ -57,6 +57,12 @@ gem "bootsnap", require: false
 # Gem to pimp up forms
 gem "simple_form", "~> 5.1"
 
+# An ActionMailer adapter to send email using SendGrid's HTTPS Web API (instead of SMTP).
+gem 'sendgrid-actionmailer', '~> 3.2'
+
+# This gem is a drop in solution for styling HTML emails with CSS
+gem 'premailer-rails', '~> 1.12'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
