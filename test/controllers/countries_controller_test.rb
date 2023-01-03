@@ -20,7 +20,7 @@ class CountriesControllerTest < ActionDispatch::IntegrationTest
       post countries_url, params: { country: { name: @country.name } }
     end
 
-    assert_redirected_to country_url(Country.last)
+    assert_redirected_to countries_url
   end
 
   test "should show country" do
@@ -35,7 +35,7 @@ class CountriesControllerTest < ActionDispatch::IntegrationTest
 
   test "should update country" do
     patch country_url(@country), params: { country: { name: @country.name } }
-    assert_redirected_to country_url(@country)
+    assert_redirected_to countries_url
   end
 
   test "should destroy country" do
