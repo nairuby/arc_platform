@@ -3,6 +3,8 @@ require "test_helper"
 class CountriesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @country = countries(:one)
+    system("yarn build", out: File::NULL)
+    system("yarn build:css", out: File::NULL)
   end
 
   test "should get index" do
