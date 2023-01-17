@@ -11,9 +11,4 @@ class Country < ApplicationRecord
 
   # Validations
   validates :name, presence: true
-
-  def update_countries
-    broadcast_prepend_to 'countries', partial: 'countries/new_country', locals: { country: self },
-                         target: 'countries'
-  end
 end
