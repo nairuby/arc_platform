@@ -4,6 +4,7 @@ class CreateChapters < ActiveRecord::Migration[7.0]
       t.string :name
       t.string :location
       t.text :description
+      t.belongs_to :country
 
       t.timestamps
     end

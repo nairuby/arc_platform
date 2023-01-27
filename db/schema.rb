@@ -18,8 +18,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_17_033124) do
     t.string "name"
     t.string "location"
     t.text "description"
+    t.bigint "country_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_chapters_on_country_id"
   end
 
   create_table "countries", force: :cascade do |t|

@@ -1,4 +1,7 @@
 class Country < ApplicationRecord
+  # Associations
+  has_many :chapters
+
   # Callbacks
   after_create_commit -> {
     broadcast_prepend_to 'countries', partial: 'countries/created_country',
