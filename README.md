@@ -5,20 +5,44 @@ On project is aimed a building a platform that  African ruby language enthusiast
 
 Nb: Please note that this project is open source, you are therefore encourage to contribute
 
-## Application Settup
+## Application Setup
 
 ### Step 1: Install prerequisites
+### Installing Ruby Version Manager(RVM) package
+* RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. It supports both UNIX like systems and Windows (with [Cygwin](https://cygwin.com) or [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/about).
+  
+Run the following in the terminal or CMD (on Windows)
 
-* Ruby Version 3.0.2
-* Rails Version 7.0.3
+``` $ \curl -sSL https://get.rvm.io | bash -s stable ```
+
+* Restart the terminal or cmd and run command below to check if rvm is installed.
+  
+  ```$ rvm list ``` 
+### Installing Ruby
+
+``` $ rvm install <ruby version> ```
+
+* e.g. Ruby Version 3.0.2
+
+### Installing Rails
+
+Since Rails is a gem, which is a standardized format that contains Ruby programs, you can also install various versions of Rails by using the ``` gem ``` command
+
+``` $ gem install rails -v <rails specified version> ```
+
+* e.g. Rails Version 7.0.3
+
+NB: For more installation details, checkout [Installing RVM](https://rvm.io/rvm/install) documentation on the same.
 
 ### Step 2: Create a Fork & Branch
 
 * Create a fork of this repository from main branch
 * Select an issue to work on from the main repository
-* Create a branch name to match the selected issue
+* Create a branch name to match the selected issue from the main branch
 
-NB: All changes you changes for the issue will be on this branch
+NB: 
+ 1. Always make sure your fork is in sync with the main
+ 2. All changes you changes for the issue will be on this branch
 
 ### Step 3: Clone & install dependencies
 
