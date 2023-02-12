@@ -20,7 +20,7 @@ class ChaptersControllerTest < ActionDispatch::IntegrationTest
     assert_difference("Chapter.count") do
       post chapters_url, params: { chapter: {
         description: @chapter.description, location: @chapter.location,
-        name: "#{@chapter.name}#{rand(9)}", country_id: Country.create(@country).id
+        name: "#{@chapter.name}#{rand(9)}", country_id: Country.last.id
       } }
     end
 
@@ -38,7 +38,10 @@ class ChaptersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update chapter" do
-    patch chapter_url(@chapter), params: { chapter: { description: @chapter.description, location: @chapter.location, name: @chapter.name } }
+    patch chapter_url(@chapter), params: { chapter: {
+      description: @chapter.description, location: @chapter.location,
+      name: "#{@chapter.name}#{rand(9)}", country_id: Country.last.id
+    } }
     assert_redirected_to chapter_url(@chapter)
   end
 
