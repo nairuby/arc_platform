@@ -4,7 +4,7 @@ class Chapter < ApplicationRecord
 
   # Callbacks
   after_create_commit -> {
-    broadcast_prepend_to 'chapters', partial: 'chapters/created_chapter',
+    broadcast_prepend_to 'chapters', partial: 'chapters/chapter',
                          locals: { chapter: self }, target: 'chapters' }
   after_destroy_commit -> { broadcast_remove_to 'chapters', target: self }
 
