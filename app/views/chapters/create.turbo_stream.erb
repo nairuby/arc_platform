@@ -1,0 +1,5 @@
+<%= turbo_stream.prepend :chapters do %>
+  <%= render partial: "chapters/created_chapter", locals: { chapter: @chapter } %>
+<% end %>
+
+<%= turbo_stream.update Chapter.new, "" %>

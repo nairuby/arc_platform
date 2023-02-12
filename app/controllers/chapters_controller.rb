@@ -27,6 +27,7 @@ class ChaptersController < ApplicationController
       if @chapter.save
         format.html { redirect_to chapter_url(@chapter), notice: "Chapter was successfully created." }
         format.json { render :show, status: :created, location: @chapter }
+        format.turbo_stream { redirect_to chapters_url, notice: "Chapter was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @chapter.errors, status: :unprocessable_entity }
