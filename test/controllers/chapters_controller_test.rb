@@ -3,6 +3,7 @@ require "test_helper"
 class ChaptersControllerTest < ActionDispatch::IntegrationTest
   setup do
     @chapter = chapters(:one)
+    @country = countries(:one)
   end
 
   test "should get index" do
@@ -17,7 +18,10 @@ class ChaptersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create chapter" do
     assert_difference("Chapter.count") do
-      post chapters_url, params: { chapter: { description: @chapter.description, location: @chapter.location, name: @chapter.name } }
+      post chapters_url, params: { chapter: {
+        description: @chapter.description, location: @chapter.location,
+        name: "#{@chapter.name}#{rand(9)}", country_id: Country.create(@country).id
+      } }
     end
 
     assert_redirected_to chapter_url(Chapter.last)
