@@ -6,6 +6,7 @@ class Chapter < ApplicationRecord
   after_create_commit -> {
     broadcast_prepend_to 'chapters', partial: 'chapters/created_chapter',
                          locals: { chapter: self }, target: 'chapters' }
+  after_destroy_commit -> { broadcast_remove_to 'chapters', target: self }
 
   # Validations
   validates :name, :location, :country_id, :description, presence: true

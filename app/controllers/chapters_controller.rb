@@ -55,6 +55,7 @@ class ChaptersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to chapters_url, notice: "Chapter was successfully destroyed." }
       format.json { head :no_content }
+      format.turbo_stream
     end
   end
 
