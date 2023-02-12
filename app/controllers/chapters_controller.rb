@@ -41,6 +41,7 @@ class ChaptersController < ApplicationController
       if @chapter.update(chapter_params)
         format.html { redirect_to chapter_url(@chapter), notice: "Chapter was successfully updated." }
         format.json { render :show, status: :ok, location: @chapter }
+        format.turbo_stream
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @chapter.errors, status: :unprocessable_entity }

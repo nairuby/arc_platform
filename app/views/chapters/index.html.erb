@@ -34,6 +34,7 @@
 
         <%= turbo_frame_tag :chapters, class: "resp-table-body" do %>
           <% @chapters.each do |chapter| %>
+            <%= turbo_frame_tag "edit_chapter_#{chapter.id}" %>
             <%= turbo_frame_tag chapter, class: "resp-table-row" do %>
               <div class="table-body-cell">
                 <%= chapter.name %>
@@ -45,7 +46,8 @@
                 <%= chapter.location %>
               </div>
               <div class="table-body-cell flex inline space-x-1 justify-start">
-                <%= link_to 'Edit', edit_chapter_path(chapter), class: 'btn btn-xs btn-info' %>
+                <%= link_to 'Edit', edit_chapter_path(chapter), class: 'btn btn-xs btn-info',
+                    data: { turbo_frame: "edit_chapter_#{chapter.id}" }%>
                 <%= button_to 'Delete', chapter, class: 'btn btn-xs btn-error',
                               method: :delete, data: { turbo_frame: "_top" } %>
               </div>
