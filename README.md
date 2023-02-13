@@ -3,6 +3,8 @@
 ## Introduction
 On project is aimed a building a platform that  African ruby language enthusiasts can use to connect, share their knowledge and experience, collaborate on projects, and stay up-to-date with the latest developments in the Ruby community. Whether you're a seasoned developer or a beginner just starting out. The platform features a variety of resources including different chapters for different countries and cities, merchandise, meetup information etc. It will also help users get information on online workshops, webinars, and meetups organized by the community, to learn from experts and network with other enthusiasts.
 
+**Project Design:** https://still-snowflake-8822.animaapp.io/
+
 Nb: Please note that this project is open source, you are therefore encourage to contribute
 
 ## Application Setup
