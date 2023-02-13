@@ -33,6 +33,8 @@ jobs:
           sudo apt-get -yqq install libpq-dev
           gem install bundler
           bundle install --jobs 4 --retry 3
+          bin/rails javascript:build
+          bin/rails css:build
           bundle exec rails db:prepare
           bundle exec rails test
 
