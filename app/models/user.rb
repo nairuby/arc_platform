@@ -4,7 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, 
          :confirmable, :lockable, :timeoutable
-
+  
+  # Callbacks
   before_create :set_defaults # Set model defaults before create
 
   # Enums
