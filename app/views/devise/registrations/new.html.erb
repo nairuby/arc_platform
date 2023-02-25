@@ -11,6 +11,13 @@
         <%= f.input :email, placeholder: 'Enter email address', label: 'Email',
                     input_html: { class: 'input-bordered w-full', autocomplete: 'email' } %>
 
+        <div class="form-control email optional user_chapter">
+          <label class="label"><span class="label-text">Chapter</span></label>
+          <%= select_tag :chapter_id, options_from_collection_for_select(Chapter.all, 'id', 'name'),
+                         include_blank: false,
+                         class: "input input-bordered string email required input-bordered w-full" %>
+        </div>
+
         <%= f.input :password, placeholder: 'Enter password', label: 'Password',
                     input_html: { class: 'input-bordered w-full' } %>
 
