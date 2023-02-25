@@ -63,6 +63,9 @@ gem 'sendgrid-actionmailer', '~> 3.2'
 # This gem is a drop in solution for styling HTML emails with CSS
 gem 'premailer-rails', '~> 1.12'
 
+# Authorization library which restricts what resources a given user is allowed to access
+gem 'cancancan', '~> 3.4'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
