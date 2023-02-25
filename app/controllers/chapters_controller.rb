@@ -1,4 +1,5 @@
 class ChaptersController < ApplicationController
+  authorize_resource # Load cancancan authorize for all actions
   before_action :set_chapter, only: %i[ show edit update destroy ]
 
   # GET /chapters or /chapters.json
