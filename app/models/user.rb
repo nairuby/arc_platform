@@ -15,6 +15,10 @@ class User < ApplicationRecord
   # Enums
   enum role: %i[member chapter_admin organization_admin]
 
+  # Validations
+  validates :email, :name, :phone_number, :github_username, presence: true
+  validates :github_username, :phone_number, uniqueness: true
+
   private
 
 
