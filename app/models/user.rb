@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, 
+         :recoverable, :rememberable, :validatable,
          :confirmable, :lockable, :timeoutable
 
   # Associations
@@ -19,8 +19,12 @@ class User < ApplicationRecord
   validates :email, :name, :phone_number, :github_username, presence: true
   validates :github_username, :phone_number, uniqueness: true
 
-  private
+  # Validate the format the Github username when it's present
+  validates :github_username, format:
+    { with: /\A(?!.*\-\-|.*\-$|.*\_)[a-zA-Z0-9][\w-]+[a-zA-Z0-9]{0,39}\z/ },
+            unless: -> { github_username.blank? }
 
+  private
 
   ##
   # A method to set model defaults if they are not set. e.g. if role is not set the default will be
