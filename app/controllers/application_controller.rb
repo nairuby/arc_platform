@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user! # All users should be authenticated in all controllers by default
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   ##
   # CanCanCan permission exception capture
@@ -11,5 +12,15 @@ class ApplicationController < ActionController::Base
         format.html { redirect_to root_path, alert: 'Please sign in to perform the action' }
       end
     end
+  end
+
+  protected
+
+  ##
+  # Add extra permitted parameters to User's model when devise controller is used
+  def configure_permitted_parameters
+    keys = %i[name phone_number github_username]
+    devise_parameter_sanitizer.permit(:sign_up, keys: keys)
+    devise_parameter_sanitizer.permit(:account_update, keys: keys)
   end
 end
