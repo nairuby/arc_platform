@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    :root {
+    /*  Override colors and other variables  */
+    }
+}
+
+@layer components {
+    .turbo-progress-bar {
+        background: linear-gradient(to right, hsl(var(--p)), hsl(var(--b1)));
+    }
+
+    @keyframes appear-then-fade {
+        0%, 100% {
+            opacity: 0
+        }
+        5%, 60% {
+            opacity: 1
+        }
+    }
+
+    .alert_custom_class {
+        animation: appear-then-fade 6s both;
+    }
+
+    .text-error {
+        font-size: .875rem;
+        color: hsl(var(--er)/var(--tw-border-opacity));
+    }
+
+    .resp-table {
+        width: 100%;
+        display: table;
+    }
+    .resp-table-body{
+        display: table-row-group;
+    }
+    .resp-table-row{
+        display: table-row;
+    }
+    .table-body-cell{
+        display: table-cell;
+        border: 1px solid #dddddd;
+        padding: 8px;
+        line-height: 1.42857143;
+        vertical-align: top;
+    }
+}

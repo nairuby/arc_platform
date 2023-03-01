@@ -1,0 +1,5 @@
+<%= turbo_stream.prepend :countries do %>
+  <%= render partial: "countries/created_country", locals: { country: @country } %>
+<% end %>
+
+<%= turbo_stream.update Country.new, "" %>
