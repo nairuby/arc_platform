@@ -24,6 +24,7 @@
 
     .alert_custom_class {
         animation: appear-then-fade 6s both;
+        margin-top: 50px;
     }
 
     .text-error {
