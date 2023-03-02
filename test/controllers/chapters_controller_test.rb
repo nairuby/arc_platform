@@ -46,6 +46,7 @@ class ChaptersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy chapter" do
+    @chapter.users_chapters.destroy_all
     assert_difference("Chapter.count", -1) do
       delete chapter_url(@chapter)
     end
