@@ -29,6 +29,8 @@ class Ability
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
 
+    user ||= User.new # guest user (not logged in)
+
     if user.organization_admin?
       can :manage, :all # Organization admin can manage everything
     end
