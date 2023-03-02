@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_12_202017) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_26_063248) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -61,11 +61,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_12_202017) do
     t.datetime "locked_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "role"
+    t.string "name"
+    t.string "phone_number"
+    t.string "github_username"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  create_table "users_chapters", force: :cascade do |t|
+    t.bigint "chapter_id", null: false
+    t.bigint "user_id", null: false
+    t.boolean "main_chapter", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chapter_id"], name: "index_users_chapters_on_chapter_id"
+    t.index ["user_id"], name: "index_users_chapters_on_user_id"
+  end
+
   add_foreign_key "projects", "chapters"
+  add_foreign_key "users_chapters", "chapters"
+  add_foreign_key "users_chapters", "users"
 end
