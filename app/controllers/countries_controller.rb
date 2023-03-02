@@ -1,5 +1,5 @@
 class CountriesController < ApplicationController
-  authorize_resource # Load cancancan authorize for all actions
+  load_and_authorize_resource # Load cancancan authorize for all actions
   before_action :set_country, only: %i[ show edit update destroy ]
 
   # GET /countries or /countries.json
