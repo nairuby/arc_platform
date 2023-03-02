@@ -5,14 +5,17 @@
     Chapters
   </h1>
 
-  <div class="grid grid-cols-3 gap-4">
+  <div class="grid grid-cols-3 gap-4 gap-y-20">
     <% @chapters.each do |chapter| %>
       <div class="chapter-grid grid flex-grow w-80 h-48 card rounded-box
         place-items-center">
         <%= image_tag image_path('chapter.jpg'), alt: 'Local meetups photo',
                       class: "rounded-lg rounded-tl-2xl"
         %>
-        <p>Local Meetups</p>
+
+        <div class="container mt-4">
+          <p class="text-lg">Local Meetups</p>
+        </div>
       </div>
     <% end %>
   </div>
