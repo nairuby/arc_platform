@@ -4,6 +4,9 @@ class ChaptersControllerTest < ActionDispatch::IntegrationTest
   setup do
     @chapter = chapters(:one)
     @country = countries(:one)
+    @user = users(:organization_admin) # Create and organization_admin user
+    @user.confirm
+    sign_in(@user) # Sign in user
   end
 
   test "should get index" do
