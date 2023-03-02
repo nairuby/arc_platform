@@ -2,10 +2,10 @@
 
 one:
   chapter: one
-  user: one
+  user: member
   main_chapter: false
 
 two:
   chapter: two
-  user: two
+  user: member
   main_chapter: false
