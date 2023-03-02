@@ -1,5 +1,23 @@
 <%= turbo_stream_from "chapters" %>
 
+<div class="container pt-20 px-56 mx-auto">
+  <h1 class="pt-16 pb-16 text-4xl text-red-600 font-bold text-5xl">
+    Chapters
+  </h1>
+
+  <div class="grid grid-cols-3 gap-4">
+    <% @chapters.each do |chapter| %>
+      <div class="chapter-grid grid flex-grow w-80 h-48 card rounded-box
+        place-items-center">
+        <%= image_tag image_path('chapter.jpg'), alt: 'Local meetups photo',
+                      class: "rounded-lg rounded-tl-2xl"
+        %>
+        <p>Local Meetups</p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
 <div class="container pt-10">
   <h1 class="text-4xl pt-6 pb-16 font-bold">
     Chapters
@@ -47,7 +65,7 @@
               </div>
               <div class="table-body-cell flex inline space-x-1 justify-start">
                 <%= link_to 'Edit', edit_chapter_path(chapter), class: 'btn btn-xs btn-info',
-                    data: { turbo_frame: "edit_chapter_#{chapter.id}" }%>
+                            data: { turbo_frame: "edit_chapter_#{chapter.id}" } %>
                 <%= button_to 'Delete', chapter, class: 'btn btn-xs btn-error',
                               method: :delete, data: { turbo_frame: "_top" } %>
               </div>
