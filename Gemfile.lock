@@ -68,6 +68,10 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    ar_lazy_preload (1.1.2)
+      rails (>= 5.2)
+    audited (5.3.2)
+      activerecord (>= 5.0, < 7.1)
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.11.1)
@@ -101,8 +105,13 @@ GEM
       warden (~> 1.2.3)
     digest (3.1.0)
     erubi (1.10.0)
+    et-orbi (1.2.7)
+      tzinfo
     faker (3.1.0)
       i18n (>= 1.8.11, < 2)
+    fugit (1.8.1)
+      et-orbi (~> 1, >= 1.2.7)
+      raabro (~> 1.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
     htmlentities (4.3.4)
@@ -130,6 +139,12 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.15.0)
+    motor-admin (0.4.7)
+      ar_lazy_preload (~> 1.0)
+      audited (~> 5.0)
+      cancancan (~> 3.0)
+      fugit (~> 1.0)
+      rails (>= 5.2)
     msgpack (1.5.2)
     net-imap (0.2.3)
       digest
@@ -163,6 +178,7 @@ GEM
     public_suffix (4.0.7)
     puma (5.6.4)
       nio4r (~> 2.0)
+    raabro (1.4.0)
     racc (1.6.0)
     rack (2.2.3.1)
     rack-test (1.1.0)
@@ -270,6 +286,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   letter_opener
+  motor-admin (~> 0.4.7)
   pg (~> 1.1)
   premailer-rails (~> 1.12)
   puma (~> 5.0)

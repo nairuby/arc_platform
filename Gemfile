@@ -66,6 +66,9 @@ gem 'premailer-rails', '~> 1.12'
 # Authorization library which restricts what resources a given user is allowed to access
 gem 'cancancan', '~> 3.4'
 
+# Motor Admin allows you to deploy a no-code admin panel for your application in less than a minute
+gem 'motor-admin', '~> 0.4.7'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
