@@ -53,6 +53,8 @@ gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'image_processing', '~> 1.2'
+# Official AWS Ruby gem for Amazon S3
+gem 'aws-sdk-s3', '~> 1.119', require: false
 
 # Gem to pimp up forms
 gem "simple_form", "~> 5.1"
