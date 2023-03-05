@@ -1,4 +1,8 @@
 class Chapter < ApplicationRecord
+  # Attachments
+  has_one_attached :main_image
+  has_one_attached :map_image
+
   # Associations
   belongs_to :country
   has_many :projects, dependent: :destroy
