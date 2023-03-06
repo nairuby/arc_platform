@@ -49,4 +49,11 @@
         line-height: 1.42857143;
         vertical-align: top;
     }
+
+    .chapter-grid {
+        img {
+            width: 330px;
+            height: 167px;
+        }
+    }
 }

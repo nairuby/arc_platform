@@ -29,7 +29,7 @@
               <li><%= link_to 'About', landing_about_path %></li>
               <li><a href="#">Events</a></li>
               <li><a href="#">Conferences</a></li>
-              <li><a href="#">Chapters</a></li>
+              <li><%= link_to 'Chapters', chapters_path %></li>
               <li><a href="#">Projects</a></li>
               <li><a href="#">Learning Materials</a></li>
 
@@ -56,7 +56,8 @@
             <a href="#" class="text-sm font-small text-gray-500 hover:text-red-600">
               Conferences
             </a>
-            <a href="#" class="text-sm font-small text-gray-500 hover:text-red-600">Chapters</a>
+            <%= link_to 'Chapters', chapters_path,
+                        class: "text-sm font-small text-gray-500 hover:text-red-600" %>
             <a href="#" class="text-sm font-small text-gray-500 hover:text-red-600">
               Projects
             </a>
