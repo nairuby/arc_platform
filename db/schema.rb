@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_09_154521) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_13_002939) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -59,7 +59,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_154521) do
   end
 
   create_table "feature_flags", force: :cascade do |t|
-    t.string "feature"
+    t.string "name"
     t.text "description"
     t.boolean "enabled"
     t.datetime "created_at", null: false
