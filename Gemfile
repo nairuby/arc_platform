@@ -99,3 +99,6 @@ group :test do
   gem "webdrivers"
   gem 'faker', '~> 3.1'
 end
+
+# Code coverage analysis tool
+gem 'simplecov', require: false, group: :test
