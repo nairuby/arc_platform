@@ -1,3 +1,4 @@
+# simple coverage test tool
 require 'simplecov'
 SimpleCov.start
 
