@@ -1,17 +1,17 @@
 # Africa Ruby Community(ARC) Platform
 
 ## Introduction
-On project is aimed a building a platform that  African ruby language enthusiasts can use to connect, share their knowledge and experience, collaborate on projects, and stay up-to-date with the latest developments in the Ruby community. Whether you're a seasoned developer or a beginner just starting out. The platform features a variety of resources including different chapters for different countries and cities, merchandise, meetup information etc. It will also help users get information on online workshops, webinars, and meetups organized by the community, to learn from experts and network with other enthusiasts.
+The project aims to build a platform for African Ruby language enthusiasts to connect, share their knowledge and experience, collaborate on projects, and stay up-to-date with the latest developments in the Ruby community, whether they are seasoned developers or beginners just starting out. The platform features a variety of resources, including different chapters for different countries and cities, merchandise, and meetup information. It will also help users get information on online workshops, webinars, and meetups organized by the community, enabling them to learn from experts and network with other enthusiasts.
 
 **Project Design:** https://still-snowflake-8822.animaapp.io/
 
-Nb: Please note that this project is open source, you are therefore encourage to contribute
+**N.B.** Please note that this project is open source, you are therefore encourage to contribute
 
 ## Application Setup
 
 ### Step 1: Install prerequisites
 ## Installing Ruby Version Manager(RVM) package
-* RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. It supports both UNIX like systems and Windows (with [Cygwin](https://cygwin.com) or [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/about).
+* RVM is a command-line tool that allows you to easily install, manage, and work with multiple Ruby environments, including interpreters and sets of gems. It supports both UNIX-like systems and Windows (with [Cygwin](https://cygwin.com) or [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/about)).
   
 Run the following in the terminal or CMD (on Windows)
 
