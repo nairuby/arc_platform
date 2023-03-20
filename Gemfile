@@ -100,5 +100,6 @@ group :test do
   gem 'faker', '~> 3.1'
 end
 
-# Code coverage analysis tool
+
+# Code coverage analysis tool for ruby
 gem 'simplecov', require: false, group: :test
