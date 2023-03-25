@@ -99,3 +99,5 @@ group :test do
   gem "webdrivers"
   gem 'faker', '~> 3.1'
 end
+
+gem "dockerfile-rails", ">= 1.2", :group => :development
