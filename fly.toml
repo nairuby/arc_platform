@@ -1,4 +1,4 @@
-# fly.toml file generated for arc-platform on 2023-03-25T12:12:36+03:00
+# fly.toml file generated for arc-platform on 2023-03-25T13:02:42+03:00
 
 app = "arc-platform"
 kill_signal = "SIGINT"
@@ -36,3 +36,7 @@ processes = []
     interval = "15s"
     restart_limit = 0
     timeout = "2s"
+
+[[statics]]
+  guest_path = "/rails/public"
+  url_prefix = "/"
