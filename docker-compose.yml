@@ -32,7 +32,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: DDockerfile
     container_name: arc_app
     volumes:
       - .:/var/app
