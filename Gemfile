@@ -95,7 +95,7 @@ group :development do
   gem 'capistrano', '~> 3.11'
   gem 'capistrano-rails', '~> 1.4'
   gem 'capistrano-passenger', '~> 0.2.0'
-  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+  gem 'capistrano-asdf'
   gem 'capistrano-sidekiq'
   gem 'capistrano-webpacker-precompile', require: false
 end
