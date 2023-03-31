@@ -84,12 +84,22 @@ group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
+  gem "dockerfile-rails", ">= 1.2", :group => :development
+
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
   gem 'letter_opener'
+
+  # Capistrano - deployment gems
+  gem 'capistrano', '~> 3.11'
+  gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-asdf'
+  gem 'capistrano-sidekiq'
+  gem 'capistrano-webpacker-precompile', require: false
 end
 
 group :test do
@@ -98,8 +108,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem 'faker', '~> 3.1'
+
+  # Code coverage analysis tool for ruby
+  gem 'simplecov', require: false
 end
-
-
-# Code coverage analysis tool for ruby
-gem 'simplecov', require: false, group: :test
