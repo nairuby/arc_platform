@@ -19,6 +19,9 @@ digitalocean:
   endpoint: <%= Rails.application.credentials.dig(:digitalocean, :endpoint) %>
   access_key_id: <%= Rails.application.credentials.dig(:digitalocean, :access_key_id) %>
   secret_access_key: <%= Rails.application.credentials.dig(:digitalocean, :secret_access_key) %>
+  bucket: <%= Rails.application.credentials.dig(:digitalocean, :space_name) %>
+  region: unused
+
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
