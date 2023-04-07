@@ -2,22 +2,16 @@
   Featured Sponsors
 </h1>
 
-<div class="container mx-auto px-20">
-  <div class="carousel justify-center p-6 space-x-16 rounded-box">
-    <%= link_to 'https://www.nairobits.com/', target: '_blank' do %>
-      <div class="carousel-item">
-        <div class="grid flex-grow w-36 h-40 card place-items-center">
-          <%= image_tag 'sponsors/current/nairobits.png', alt: "Nairobits" %>
-        </div>
-      </div>
-    <% end %>
+<div class="grid grid-flow-col  gap-2 px-20 place-content-center">
+  <%= link_to 'https://www.nairobits.com/', target: '_blank' do %>
+    <div class="items-center justify-center w-36 h-40 card place-items-center">
+      <%= image_tag 'sponsors/current/nairobits.png', alt: "Nairobits" %>
+    </div>
+  <% end %>
 
-    <%= link_to 'https://finplusgroup.com/', target: '_blank' do %>
-      <div class="carousel-item">
-        <div class="grid flex-grow w-36 h-40 card place-items-center">
-          <%= image_tag 'sponsors/current/finplus.png', alt: 'Finplus Group' %>
-        </div>
-      </div>
-    <% end %>
-  </div>
+  <%= link_to 'https://finplusgroup.com/', target: '_blank' do %>
+    <div class="items-center justify-center w-36 h-40 card place-items-center">
+      <%= image_tag 'sponsors/current/finplus.png', alt: 'Finplus Group' %>
+    </div>
+  <% end %>
 </div>
