@@ -5,60 +5,56 @@
 
   <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4
 xl:grid-cols-5 gap-2 px-20 place-content-center">
-    <div class="items-center justify-center w-44 h-40 card border border-red-600
+    <div class="place-self-center w-72 md:w-48 card border border-red-600
        rounded-b-md rounded-tr-md">
-      <%= image_tag image_path 'country_kenya.png' %>
-      <div>
-        <p class="text-2xl text-red-600">Kenya</p>
-        <%= link_to new_user_registration_path do %>
-          <p>Join community</p>
-        <% end %>
-      </div>
+
+      <%= image_tag image_path('country_kenya.png'), class: 'pt-2 place-self-center h-16 md:36' %>
+      <p class="place-self-center text-2xl text-red-600">Kenya</p>
+
+      <%= link_to new_user_registration_path, class: 'place-self-center pb-6' do %>
+        <p>Join community</p>
+      <% end %>
     </div>
 
-    <div class="items-center justify-center w-44 h-40 card border border-red-600
+    <div class="place-self-center w-72 md:w-48 card border border-red-600
        rounded-b-md rounded-tr-md">
-      <%= image_tag image_path 'country_rwanda.png' %>
-      <div>
-        <p class="text-2xl text-red-600">Rwanda</p>
-        <%= link_to new_user_registration_path do %>
-          <p>Join community</p>
-        <% end %>
-      </div>
+
+      <%= image_tag image_path('country_rwanda.png'), class: 'pt-2 place-self-center h-16 md:36' %>
+      <p class="place-self-center text-2xl text-red-600">Rwanda</p>
+
+      <%= link_to new_user_registration_path, class: 'place-self-center pb-6' do %>
+        <p>Join community</p>
+      <% end %>
     </div>
 
-    <div class="items-center justify-center w-44 h-40 card border border-red-600
+    <div class="place-self-center w-72 md:w-48 card border border-red-600
        rounded-b-md rounded-tr-md">
-      <%= image_tag image_path 'country_tanzania.png' %>
-      <div>
-        <p class="text-2xl text-red-600">Tanzania</p>
 
-        <%= link_to new_user_registration_path do %>
-          <p>Join community</p>
-        <% end %>
-      </div>
+      <%= image_tag image_path('country_tanzania.png'), class: 'pt-2 place-self-center h-16 md:36' %>
+      <p class="place-self-center text-2xl text-red-600">Tanzania</p>
+
+      <%= link_to new_user_registration_path, class: 'place-self-center pb-6' do %>
+        <p>Join community</p>
+      <% end %>
     </div>
 
-    <div class="items-center justify-center w-44 h-40 card border border-red-600
+    <div class="place-self-center w-72 md:w-48 card border border-red-600
        rounded-b-md rounded-tr-md">
-      <%= image_tag image_path 'country_uganda.png' %>
-      <div>
-        <p class="text-2xl text-red-600">Uganda</p>
 
-        <%= link_to new_user_registration_path do %>
-          <p>Join community</p>
-        <% end %>
-      </div>
+      <%= image_tag image_path('country_uganda.png'), class: 'pt-2 place-self-center h-16 md:36' %>
+      <p class="place-self-center text-2xl text-red-600">Uganda</p>
+
+      <%= link_to new_user_registration_path, class: 'place-self-center pb-6' do %>
+        <p>Join community</p>
+      <% end %>
     </div>
 
-    <a href="mailto:organisers@rubycommunity.africa">
-      <div class="items-center justify-center w-44 h-40 card border border-slate-900
-       border-dashed rounded-b-md rounded-tr-md">
-        <%= image_tag image_path 'add.png' %>
-        <div class="px-5">
-          <p class="text-2xl">Request new chapter</p>
-        </div>
-      </div>
+    <a href="mailto:organisers@rubycommunity.africa" class="place-self-center w-72 md:w-48 card border border-red-600
+       rounded-b-md rounded-tr-md">
+
+      <%= image_tag image_path('add.png'), class: 'pt-2 place-self-center h-16 md:36' %>
+      <p class="place-self-center text-xl text-red-600">Request new chapter</p>
+      <p class="pb-6"></p>
     </a>
   </div>
 </div>
