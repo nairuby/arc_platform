@@ -19,7 +19,7 @@
               <li><%= link_to 'Conferences', '#' %></li>
             <% end %>
 
-            <li><%= link_to 'Chapters', chapter_path %></li>
+            <li><%= link_to 'Chapters', chapters_path %></li>
 
             <% if FeatureFlag.find_by(name: 'projects').try(:enabled) %>
               <li><%= link_to 'Projects', '#' %></li>
