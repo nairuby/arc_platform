@@ -192,13 +192,16 @@ Thank you for your interest in contributing to the Africa Ruby Community (ARC) P
 
 We label our issues to help contributors find ones that match their skills and experience level. Here are some labels you might find helpful:
 
+
+
+
 | Difficulty Level | Description                              | Label    |
 |------------------|------------------------------------------|----------|
-| Easy/ Beginner/ Novice             | Issues that are ideal for first-time contributors | <span style="background-color: #CCF09E; color: #000; padding: 5px 10px; border-radius: 20px;">DifficultyLevelEasy</span>         |
-| Very Easy        | Simple issues that can be fixed quickly  | <span style="background-color: #619B16; color: #000; padding: 5px 10px; border-radius: 20px;">DifficultyLevelVeryEasy</span>    |
-| Average/ Normal/ Medium/ Standard/ Intermediate          | Issues that require some understanding of the codebase  | <span style="background-color: #DAD22C; color: #000; padding: 5px 10px; border-radius: 20px;">DifficultyLevelAverage</span>      |
-| Hard/ Expert/ Difficult             | Issues that require a significant amount of time and effort | <span style="background-color: #E1803C; color: #000; padding: 5px 10px; border-radius: 20px;">DifficultyLevelHard</span>        |
-| Harder           | Very challenging issues that require advanced knowledge | <span style="background-color: #C70039; color: #fff; padding: 5px 10px; border-radius: 20px;">DifficultyLevelHarder</span>      |
+| Easy/ Beginner/ Novice | Issues that are ideal for first-time contributors | ![DifficultyLevelEasy](https://img.shields.io/badge/DifficultyLevelEasy-green.svg?style=for-the-badge)|
+| Very Easy        | Simple issues that can be fixed quickly  | ![DifficultyLevelVeryEasy](https://img.shields.io/badge/DifficultyLevelVeryEasy-619B16?style=for-the-badge)|
+| Average/ Normal/ Medium/ Standard/ Intermediate          | Issues that require some understanding of the codebase  | ![DifficultyLevelAverage](https://img.shields.io/badge/DifficultyLevelAverage-DAD22C?style=for-the-badge&color=fbca04) |
+| Hard/ Expert/ Difficult             | Issues that require a significant amount of time and effort | ![DifficultyLevelHard](https://img.shields.io/badge/DifficultyLevelHard-E1803C?style=for-the-badge&color=d93f0b) |
+| Harder           | Very challenging issues that require advanced knowledge | ![DifficultyLevelHarder](https://img.shields.io/badge/DifficultyLevelHarder-C70039?style=for-the-badge)|
 
 
 To guide people in searching for issues using these labels, you can provide the following steps:
