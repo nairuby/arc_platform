@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   root 'landing#index'
 
   get 'about', to: 'landing#about', as: :landing_about
+  get 'learn', to: 'landing#learn', as: :landing_learn
 end

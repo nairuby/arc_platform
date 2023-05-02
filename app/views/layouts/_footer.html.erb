@@ -1,66 +1,64 @@
 <footer aria-labelledby="footer-heading">
-  <div class="flex flex-row pt-32">
+  <div class="flex pt-32">
     <div class="basis-2/6">
-      <%= link_to root_path, class: "flex justify-end pr-20" do %>
-        <%= image_tag image_path('arc_dark_gray_logo.png'), class: 'w-40' %>
+      <%= link_to root_path, class: "justify-end pr-20" do %>
+        <%= image_tag image_path('arc_dark_gray_logo.png'), class: 'w-20 md:w-48' %>
       <% end %>
     </div>
 
-    <div class="basis-1/6">
-      <ul>
-        <li><%= link_to 'Home', root_path %></li>
+    <div class="basis-3/6 text-sm">
+      <div class="grid grid-cols-2 md:grid-cols-2 place-content-center">
+        <div class="place-self-center-">
+          <ul>
+            <li><%= link_to 'Home', root_path %></li>
+            <% if FeatureFlag.find_by(name: 'events').try(:enabled) %>
+              <li><%= link_to 'Events', '#' %></li>
+            <% end %>
 
-        <% if FeatureFlag.find_by(name: 'events').try(:enabled) %>
-          <li><%= link_to 'Events', '#' %></li>
-        <% end %>
+            <% if FeatureFlag.find_by(name: 'conferences').try(:enabled) %>
+              <li><%= link_to 'Conferences', '#' %></li>
+            <% end %>
 
-        <% if FeatureFlag.find_by(name: 'conferences').try(:enabled) %>
-          <li><%= link_to 'Conferences', '#' %></li>
-        <% end %>
+            <li><%= link_to 'Chapters', chapters_path %></li>
 
-        <li><%= link_to 'Chapters', '#' %></li>
+            <li><%= link_to 'Learning materials', landing_learn_path %></li>
 
-        <% if FeatureFlag.find_by(name: 'projects').try(:enabled) %>
-          <li><%= link_to 'Projects', '#' %></li>
-        <% end %>
-      </ul>
+            <% if FeatureFlag.find_by(name: 'projects').try(:enabled) %>
+              <li><%= link_to 'Projects', '#' %></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="place-self-center">
+          <ul>
+            <li><%= link_to 'Sponsor', 'mailto:organisers@rubycommunity.africa' %></li>
+
+            <% if FeatureFlag.find_by(name: 'members').try(:enabled) %>
+              <li><%= link_to 'Members', '#' %></li>
+            <% end %>
+
+            <li><%= link_to 'About', landing_about_path %></li>
+
+            <% if FeatureFlag.find_by(name: 'contact_us').try(:enabled) %>
+              <li><%= link_to 'Contact Us', '#' %></li>
+            <% end %>
+
+            <% if FeatureFlag.find_by(name: 'contact_us').try(:enabled) %>
+              <li><%= link_to 'Code of conduct', '#' %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
     </div>
-    <div class="basis-1/6">
+
+    <div class="basis-1/6 text-sm">
       <ul>
-
-        <% if FeatureFlag.find_by(name: 'learning_materials').try(:enabled) %>
-          <li><%= link_to 'Learning materials', '#' %></li>
-        <% end %>
-
-        <% if FeatureFlag.find_by(name: 'members').try(:enabled) %>
-          <li><%= link_to 'Members', '#' %></li>
-        <% end %>
-
-        <li><%= link_to 'About', landing_about_path %></li>
-
-        <% if FeatureFlag.find_by(name: 'contact_us').try(:enabled) %>
-          <li><%= link_to 'Contact Us', '#' %></li>
-        <% end %>
-
-        <% if FeatureFlag.find_by(name: 'contact_us').try(:enabled) %>
-          <li><%= link_to 'Code of conduct', '#' %></li>
-        <% end %>
-      </ul>
-    </div>
-    <div class="basis-1/6">
-      <ul>
-        <li><%= link_to 'Sponsor', 'mailto:organisers@rubycommunity.africa' %></li>
-      </ul>
-    </div>
-    <div class="basis-1/6">
-      <ul>
+        <li><b>Connect</b></li>
         <li>
           <%= link_to 'https://twitter.com/ruby_african' do %>
             <div class="inline-flex text-sm">
               <div class="pr-4 self-center">
                 <%= image_tag image_path('brands_twitter.png'), class: "w-5" %>
               </div>
-              Twitter
             </div>
           <% end %>
         </li>
@@ -79,23 +77,41 @@
         <% end %>
 
         <li>
-        <li>
           <%= link_to 'https://www.facebook.com/rubycommunity.africa' do %>
             <div class="inline-flex text-sm">
               <div class="pr-4 self-center">
                 <%= image_tag image_path('brands_facebook.png'), class: "w-5" %>
               </div>
-              Facebook
             </div>
           <% end %>
         </li>
+
         <li>
           <%= link_to '#' do %>
             <div class="inline-flex text-sm">
               <div class="pr-4 self-center">
                 <%= image_tag image_path('brands_instagram.png'), class: "w-5" %>
               </div>
-              Instagram
+            </div>
+          <% end %>
+        </li>
+
+        <li>
+          <%= link_to 'https://www.linkedin.com/company/african-ruby-community/' do %>
+            <div class="inline-flex text-sm">
+              <div class="pr-4 self-center">
+                <%= image_tag image_path('brands_linkedin.png'), class: "w-5" %>
+              </div>
+            </div>
+          <% end %>
+        </li>
+
+        <li>
+          <%= link_to 'https://github.com/nairuby' do %>
+            <div class="inline-flex text-sm">
+              <div class="pr-4 self-center">
+                <%= image_tag image_path('brands_github.png'), class: "w-5" %>
+              </div>
             </div>
           <% end %>
         </li>
