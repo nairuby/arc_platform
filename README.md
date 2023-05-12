@@ -47,8 +47,8 @@ NB: For more installation details, checkout [Installing RVM](https://rvm.io/rvm/
 You can choose the Ruby version for your project with, for example:
 ```sh
 cd myproject
-# choose Ruby version 3.1.2:
-rbenv local 3.1.2
+# choose Ruby version 3.0.2:
+rbenv local 3.0.2
 ```
 
 ### Installation
@@ -130,7 +130,7 @@ rbenv install -l
 # list all local versions:
 rbenv install -L
 # install a Ruby version:
-rbenv install 3.1.2
+rbenv install 3.0.2
 ```
 All done!
 
@@ -168,11 +168,7 @@ Run the following command in the terminal
 
 ### Step 5: Start server
 
-``` $ rails server ``` 
-
-or 
-
-``` $ rails s ```
+```./bin/dev```
 
 ### step 6: Creating a pull request
 
