@@ -1,4 +1,5 @@
-<%  content_for(:title,"Chapters") %>
+<% content_for(:title,"Chapters") %>
+<% content_for(:description," A showcase of the different ruby communities spread across the East African region.") %>
 <div class="container pt-20 px-4 xl:px-56 mx-auto">
   <h1 class="pt-16 pb-16 text-4xl text-red-600 font-bold text-5xl">
     Chapters
@@ -10,7 +11,7 @@
       <div class="chapter-grid grid flex-grow w-45 h-48 card rounded-box
         place-items-center">
         <%= image_tag chapter.image.attached? ? chapter.image.url : image_path('chapter.jpg'),
-                      alt: 'Local meetups photo',
+                      alt: chapter.name,
                       class: "rounded-lg rounded-tl-2xl"
         %>
 
