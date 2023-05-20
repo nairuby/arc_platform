@@ -1,4 +1,3 @@
-<% content_for(:robots,"index, follow")%>
 <%= render 'landing/home/intro' %>
 
 <% if FeatureFlag.find_by(name: 'events').try(:enabled) %>
