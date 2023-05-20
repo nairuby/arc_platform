@@ -2,6 +2,11 @@
 User-agent: *
 
 Disallow: /admin
-
+Disallow: /chapters/new
+Disallow: /chapters/edit
+Disallow: /countries/new
+Disallow: /countries/edit
+Disallow: /projects/new
+Disallow: /projects/edit
 
 Sitemap: https://rubycommunity.africa/sitemap.xml
