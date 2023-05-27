@@ -1,5 +1,6 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://www.example.com"
+SitemapGenerator::Sitemap.default_host = "https://rubycommunity.africa"
+SitemapGenerator::Sitemap.compress = false
 
 SitemapGenerator::Sitemap.create do
   # Put links creation logic here.
@@ -24,4 +25,26 @@ SitemapGenerator::Sitemap.create do
   #   Article.find_each do |article|
   #     add article_path(article), :lastmod => article.updated_at
   #   end
+  
+  add '/about',
+    changefreq: 'monthly',
+    priority: 0.9
+  add '/learn',
+    changefreq: 'monthly',
+    priority: 0.9
+  add '/chapters',
+    changefreq: 'monthly',
+    priority: 0.9
+
+  Chapter.find_each do |chapter|
+    add chapter_path(chapter), :lastmod => chapter.updated_at
+  end
+
+  add '/users/sign_up',
+    changefreq: 'monthly',
+    priority: 0.8
+  
+  add '/users/sign_in',
+    changefreq: 'monthly',
+    priority: 0.8
 end
