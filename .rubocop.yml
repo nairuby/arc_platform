@@ -1,0 +1,21 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions:
+    rubocop-rake: false
+  TargetRubyVersion: 3.0.2
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/migrate/*
+    - db/schema.rb
+    - node_modules/**/*
+    - public/**/*
+    - tmp/**/*
+    - vendor/**/*
+
+Style/Documentation:
+  Enabled: false
