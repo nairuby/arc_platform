@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CountriesController < ApplicationController
   before_action :set_country, only: %i[show]
 
@@ -7,8 +9,7 @@ class CountriesController < ApplicationController
   end
 
   # GET /countries/1 or /countries/1.json
-  def show
-  end
+  def show; end
 
   private
 

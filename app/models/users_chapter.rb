@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UsersChapter < ApplicationRecord
   # Associations
   belongs_to :chapter

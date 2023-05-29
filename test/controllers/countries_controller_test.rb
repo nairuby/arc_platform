@@ -1,4 +1,6 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class CountriesControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -8,12 +10,12 @@ class CountriesControllerTest < ActionDispatch::IntegrationTest
     sign_in(@user) # Sign in user
   end
 
-  test "should get index" do
+  test 'should get index' do
     get countries_url
     assert_response :success
   end
 
-  test "should show country" do
+  test 'should show country' do
     get country_url(@country)
     assert_response :success
   end

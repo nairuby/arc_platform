@@ -1,4 +1,6 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class ChaptersControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -6,12 +8,12 @@ class ChaptersControllerTest < ActionDispatch::IntegrationTest
     @country = countries(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get chapters_url
     assert_response :success
   end
 
-  test "should show chapter" do
+  test 'should show chapter' do
     get chapter_url(@chapter)
     assert_response :success
   end

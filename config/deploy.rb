@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.17.2"
+lock '~> 3.17.2'
 
 set :user, 'ubuntu'
 
@@ -23,9 +25,9 @@ set :deploy_to, "/var/www/#{fetch :application}"
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, %w{ config/database.yml config/credentials/production.key }
-set :linked_dirs, %w{ vendor/bundle public/system log tmp/pids tmp/cache tmp/sockets
-public/packs .bundle node_modules }
+set :linked_files, %w[config/database.yml config/credentials/production.key]
+set :linked_dirs, %w[ vendor/bundle public/system log tmp/pids tmp/cache tmp/sockets
+                      public/packs .bundle node_modules ]
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }

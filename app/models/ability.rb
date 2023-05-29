@@ -31,8 +31,8 @@ class Ability
 
     user ||= User.new # guest user (not logged in)
 
-    if user.organization_admin?
-      can :manage, :all # Organization admin can manage everything
-    end
+    return unless user.organization_admin?
+
+    can :manage, :all # Organization admin can manage everything
   end
 end

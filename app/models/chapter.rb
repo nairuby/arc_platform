@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Chapter < ApplicationRecord
   # Attachments
   has_one_attached :image
@@ -9,7 +11,7 @@ class Chapter < ApplicationRecord
   has_many :users, through: :users_chapters
 
   # Validations
-  validates :name, :location, :country_id, :description, presence: true
+  validates :name, :location, :description, presence: true
   validates :name, uniqueness: true
 
   ##
