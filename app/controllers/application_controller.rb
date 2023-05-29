@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
       if user_signed_in?
         format.html { redirect_to root_path, alert: exception.message }
       else
-        format.html { redirect_to root_path, alert: 'Please sign in to perform the action' }
+        format.html { redirect_to root_path, alert: t('unauthorized.sign_in') }
       end
     end
   end
