@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   authenticate :user do
     mount Motor::Admin => '/admin'
   end
-  resources :projects
+  resources :projects, only: [:index, :show]
   resources :chapters, only: [:index, :show]
   resources :countries
   devise_for :users, controllers: {
