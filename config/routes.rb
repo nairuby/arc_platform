@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     mount Motor::Admin => '/admin'
   end
   resources :projects
-  resources :chapters
+  resources :chapters, only: [:index, :show]
   resources :countries
   devise_for :users, controllers: {
     registrations: 'users/registrations', # Override devise registration controller
