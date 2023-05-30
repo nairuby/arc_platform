@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   end
   resources :projects, only: [:index, :show]
   resources :chapters, only: [:index, :show]
-  resources :countries
+  resources :countries, only: [:index, :show]
   devise_for :users, controllers: {
     registrations: 'users/registrations', # Override devise registration controller
   }
