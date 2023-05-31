@@ -2,7 +2,7 @@
 
 class Country < ApplicationRecord
   # Associations
-  has_many :chapters
+  has_many :chapters, dependent: :nullify
 
   # Callbacks
   after_create_commit lambda {

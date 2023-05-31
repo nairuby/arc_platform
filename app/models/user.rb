@@ -8,7 +8,7 @@ class User < ApplicationRecord
          :confirmable, :lockable, :timeoutable
 
   # Associations
-  has_many :users_chapters
+  has_many :users_chapters, dependent: :nullify
   has_many :chapters, through: :users_chapters
 
   # Callbacks
