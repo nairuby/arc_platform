@@ -1,0 +1,31 @@
+<%# Learning materials view %>
+
+<div class="container px-4 xl:px-56 mx-auto" class="text-red-500">
+  <h1 class="pt-16 text-4xl text-red-600 font-bold text-5xl" class="text-red-500">
+    Featured learning materials
+  </h1>
+
+  <p class="pt-12 text-justify" class="text-red-500">
+    Take a look at our list of resources that can help you get up to speed with the Ruby programming
+    language from the basic building blocks upto to the various frameworks and tools in the Ruby
+    ecosystem. If you want to add your own resources, fork this repo and send in a pull request.
+  </p>
+
+  <div class="container">
+    <h1 class="text-3xl font-bold mb-4">Learning Materials</h1>
+    <ul class="grid grid-cols-2 gap-4">
+      <% @learning_materials.each do |learning_material| %>
+        <li>
+          <div class="relative">
+            <img src="<%= learning_material.image_url %>" alt="<%= learning_material.title %>" class="w-full h-64 object-cover">
+            <div class="absolute top-0 right-0 p-4 text-white">
+              <span class="text-sm"><%= learning_material.difficulty %></span>
+            </div>
+          </div>
+          <h3 class="mt-4"><%= learning_material.title %></h3>
+          <a href="<%= learning_material.resource_url %>" class="button">Download Resource</a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

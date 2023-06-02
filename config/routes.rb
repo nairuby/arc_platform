@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :projects, only: [:index, :show]
   resources :chapters, only: [:index, :show]
   resources :countries, only: [:index, :show]
+  # TODO update learning resouce
+  resources :learning_materials
   devise_for :users, controllers: {
     registrations: 'users/registrations', # Override devise registration controller
   }
