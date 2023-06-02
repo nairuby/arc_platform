@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   authenticate :user do
     mount Motor::Admin => '/admin'
   end
-  resources :projects
-  resources :chapters
-  resources :countries
+  resources :projects, only: [:index, :show]
+  resources :chapters, only: [:index, :show]
+  resources :countries, only: [:index, :show]
   devise_for :users, controllers: {
     registrations: 'users/registrations', # Override devise registration controller
   }

@@ -15,13 +15,6 @@
 
         <div class="container mt-4">
           <span class="text-lg"><%= chapter.name %></span>
-
-          <% if can? :manage, chapter %>
-            <%= link_to 'Edit', edit_chapter_path(chapter), class: 'btn btn-xs btn-info',
-                        data: { turbo_frame: "edit_chapter_#{chapter.id}" } %>
-            <%= link_to 'Delete', chapter, class: 'btn btn-xs btn-error',
-                        method: :delete %>
-          <% end %>
         </div>
       </div>
     <% end %>
