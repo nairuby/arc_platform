@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ApplicationController < ActionController::Base
   before_action :authenticate_user! # All users should be authenticated in all controllers by default
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -9,7 +11,7 @@ class ApplicationController < ActionController::Base
       if user_signed_in?
         format.html { redirect_to root_path, alert: exception.message }
       else
-        format.html { redirect_to root_path, alert: 'Please sign in to perform the action' }
+        format.html { redirect_to root_path, alert: t('unauthorized.sign_in') }
       end
     end
   end
