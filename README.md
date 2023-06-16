@@ -144,7 +144,7 @@ You are now free to proceed to the steps below:
 
 NB: 
  1. Always make sure your fork is in sync with the main
- 2. All changes you changes for the issue will be on this branch
+ 2. All changes you make for the issue will be on this branch
 
 ### Step 3: Clone & install dependencies
 
