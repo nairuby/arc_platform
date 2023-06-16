@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ##
 # CanCan permissions for motor_admin
 module Motor

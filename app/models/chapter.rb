@@ -1,15 +1,17 @@
+# frozen_string_literal: true
+
 class Chapter < ApplicationRecord
   # Attachments
   has_one_attached :image
 
   # Associations
   belongs_to :country
-  has_many :projects, dependent: :destroy
-  has_many :users_chapters
+  has_many :projects, dependent: :nullify
+  has_many :users_chapters, dependent: :destroy
   has_many :users, through: :users_chapters
 
   # Validations
-  validates :name, :location, :country_id, :description, presence: true
+  validates :name, :location, :description, presence: true
   validates :name, uniqueness: true
 
   ##

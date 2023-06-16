@@ -1,4 +1,6 @@
-require "test_helper"
+# frozen_string_literal: true
+
+require 'test_helper'
 
 class ProjectsControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -9,12 +11,12 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
     sign_in(@user) # Sign in user
   end
 
-  test "should get index" do
+  test 'should get index' do
     get projects_url
     assert_response :success
   end
 
-  test "should show project" do
+  test 'should show project' do
     get project_url(@project)
     assert_response :success
   end
