@@ -186,52 +186,23 @@ Thank you for your interest in contributing to the Africa Ruby Community (ARC) P
 
   ### Finding Issues to Work On
 
-We label our issues to help contributors find ones that match their skills and experience level. Here are some labels you might find helpful:
+  We label our issues to help contributors find ones that match their skills and experience level. Here are some labels you might find helpful:
 
 
+  | Difficulty Level | Description                              | Label    |
+  |------------------|------------------------------------------|----------|
+  | Easy/ Beginner/ Novice | Issues that are ideal for first-time contributors | ![DifficultyLevelEasy](https://img.shields.io/badge/DifficultyLevelEasy-green.svg?style=for-the-badge)|
+  | Very Easy        | Simple issues that can be fixed quickly  | ![DifficultyLevelVeryEasy](https://img.shields.io/badge/DifficultyLevelVeryEasy-619B16?style=for-the-badge)|
+  | Average/ Normal/ Medium/ Standard/ Intermediate          | Issues that require some understanding of the codebase  | ![DifficultyLevelAverage](https://img.shields.io/badge/DifficultyLevelAverage-DAD22C?style=for-the-badge&color=fbca04) |
+  | Hard/ Expert/ Difficult             | Issues that require a significant amount of time and effort | ![DifficultyLevelHard](https://img.shields.io/badge/DifficultyLevelHard-E1803C?style=for-the-badge&color=d93f0b) |
+  | Harder           | Very challenging issues that require advanced knowledge | ![DifficultyLevelHarder](https://img.shields.io/badge/DifficultyLevelHarder-C70039?style=for-the-badge)|
 
 
-| Difficulty Level | Description                              | Label    |
-|------------------|------------------------------------------|----------|
-| Easy/ Beginner/ Novice | Issues that are ideal for first-time contributors | ![DifficultyLevelEasy](https://img.shields.io/badge/DifficultyLevelEasy-green.svg?style=for-the-badge)|
-| Very Easy        | Simple issues that can be fixed quickly  | ![DifficultyLevelVeryEasy](https://img.shields.io/badge/DifficultyLevelVeryEasy-619B16?style=for-the-badge)|
-| Average/ Normal/ Medium/ Standard/ Intermediate          | Issues that require some understanding of the codebase  | ![DifficultyLevelAverage](https://img.shields.io/badge/DifficultyLevelAverage-DAD22C?style=for-the-badge&color=fbca04) |
-| Hard/ Expert/ Difficult             | Issues that require a significant amount of time and effort | ![DifficultyLevelHard](https://img.shields.io/badge/DifficultyLevelHard-E1803C?style=for-the-badge&color=d93f0b) |
-| Harder           | Very challenging issues that require advanced knowledge | ![DifficultyLevelHarder](https://img.shields.io/badge/DifficultyLevelHarder-C70039?style=for-the-badge)|
+  To guide people in searching for issues using these labels, you can provide the following steps:
 
-
-To guide people in searching for issues using these labels, you can provide the following steps:
-
-1. Go to the project's repository on GitHub.
-2. Click on the `Issues` tab.
-3. Use the search bar at the top to search for issues using one or more of the labels listed above.
-4. You can refine your search by adding additional keywords or filters, such as language, platform, or component.
-5. Once you find an issue you are interested in working on, read through the description and comments to get a better understanding of the problem and any suggested solutions.
-6. If you have any questions or need help, leave a comment on the issue and wait for feedback from other contributors or maintainers.
-
-NB: The section below outlines how the README should be written
-
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running. (guide)
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  1. Go to the project's repository on GitHub.
+  2. Click on the `Issues` tab.
+  3. Use the search bar at the top to search for issues using one or more of the labels listed above.
+  4. You can refine your search by adding additional keywords or filters, such as language, platform, or component.
+  5. Once you find an issue you are interested in working on, read through the description and comments to get a better understanding of the problem and any suggested solutions.
+  6. If you have any questions or need help, leave a comment on the issue and wait for feedback from other contributors or maintainers.
