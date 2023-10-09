@@ -38,3 +38,6 @@
 /config/credentials/production.key
 
 coverage/
+
+# Ignore JetBrains IDE .idea directory
+.idea/
