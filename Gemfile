@@ -41,6 +41,9 @@ gem 'redis', '~> 4.0'
 # Devise 4.0 works with Rails 4.1 onwards.
 gem 'devise'
 
+#A dynamic sitemap generator gem for the Ruby on Rails framework
+gem 'sitemap_generator'
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
 
