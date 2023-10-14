@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>ArcPlatform <%= " - " + yield(:title) if content_for?(:title)%></title>
   <meta name="description" content=<%= content_for?(:description) ? yield(:description) : "African Ruby Community, ARC is an organization that was started in 2010. The community currently has over reach of over 5,000 members spread across East Africa, made of developers (Engineers),entrepreneurs, designers and freelancers."%>>
@@ -152,7 +152,7 @@
           <% else %>
             <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
               <%= link_to new_user_registration_path do %>
-                <button class="btn btn-sm btn-primary normal-case">Sign up</button>
+                <button class="btn btn-sm btn-primary normal-case text-white">Sign up</button>
               <% end %>
 
               <%= link_to new_user_session_path,
