@@ -26,7 +26,7 @@ SitemapGenerator::Sitemap.create do
   #     add article_path(article), :lastmod => article.updated_at
   #   end
   
-  add '/about',
+  add '/about_us',
     changefreq: 'monthly',
     priority: 0.9
   add '/learn',

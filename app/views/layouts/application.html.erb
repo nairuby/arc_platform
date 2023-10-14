@@ -28,7 +28,7 @@
             <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow
             bg-base-100 rounded-box w-52 md:hidden">
               <li><%= link_to 'Home', root_path %></li>
-              <li><%= link_to 'About', landing_about_path %></li>
+              <li><%= link_to 'About ARC', landing_about_path %></li>
 
               <% if FeatureFlag.find_by(name: 'events').try(:enabled) %>
                 <li><a href="#">Events</a></li>
