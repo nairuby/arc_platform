@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>ArcPlatform <%= " - " + yield(:title) if content_for?(:title)%></title>
   <meta name="description" content=<%= content_for?(:description) ? yield(:description) : "African Ruby Community, ARC is an organization that was started in 2010. The community currently has over reach of over 5,000 members spread across East Africa, made of developers (Engineers),entrepreneurs, designers and freelancers."%>>
@@ -28,7 +28,7 @@
             <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow
             bg-base-100 rounded-box w-52 md:hidden">
               <li><%= link_to 'Home', root_path %></li>
-              <li><%= link_to 'About', landing_about_path %></li>
+              <li><%= link_to 'About ARC', landing_about_path %></li>
 
               <% if FeatureFlag.find_by(name: 'events').try(:enabled) %>
                 <li><a href="#">Events</a></li>
@@ -57,7 +57,7 @@
           <div class="flex justify-start lg:w-0 lg:flex-1">
             <%= link_to root_path do %>
               <span class="sr-only">African Ruby Community</span>
-              <%= image_tag 'arc_logo_coloured.png', class: "h-8 w-auto sm:h-7" %>
+              <%= image_tag('arc_logo_coloured.png', alt: "Community Logo",class: "h-8 w-auto sm:h-7") %>
             <% end %>
           </div>
           <nav class="hidden space-x-10 md:flex">
@@ -152,7 +152,7 @@
           <% else %>
             <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
               <%= link_to new_user_registration_path do %>
-                <button class="btn btn-sm btn-primary normal-case">Sign up</button>
+                <button class="btn btn-sm btn-primary normal-case text-white">Sign up</button>
               <% end %>
 
               <%= link_to new_user_session_path,
