@@ -59,4 +59,4 @@ NON-CODE CONTRIBUTIONS:
 
 ### Thank You!
 
-Thank you for taking the time to contribute to the [repository name] project! Your contributions help to make the project better for everyone.
+Thank you for taking the time to contribute to the ARC platform project! Your contributions help to make the project better for everyone.
