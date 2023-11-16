@@ -1,208 +1,166 @@
-# Africa Ruby Community(ARC) Platform
+# Africa Ruby Community (ARC) Platform
 
 ## Introduction
-The project aims to build a platform for African Ruby language enthusiasts to connect, share their knowledge and experience, collaborate on projects, and stay up-to-date with the latest developments in the Ruby community, whether they are seasoned developers or beginners just starting out. The platform features a variety of resources, including different chapters for different countries and cities, merchandise, and meetup information. It will also help users get information on online workshops, webinars, and meetups organized by the community, enabling them to learn from experts and network with other enthusiasts.
+The Africa Ruby Community (ARC) Platform is a project aimed at creating a hub for Ruby language enthusiasts in Africa. This platform facilitates connection, knowledge sharing, collaboration on projects, and staying updated with the latest Ruby community developments. Whether you're a seasoned developer or a beginner, this platform offers tailored resources for different countries and cities, merchandise, meetup information, and details about online workshops and webinars.
 
-**Project Design:** https://still-snowflake-8822.animaapp.io/
+- **Project Design:** [ARC Platform Design](https://still-snowflake-8822.animaapp.io/)
+- **Database Design:** [ARC Database Design](https://dbdiagram.io/d/62afab7c9921fe2a96397c1e)
 
-**Database Design:** https://dbdiagram.io/d/62afab7c9921fe2a96397c1e
-
-**N.B.** Please note that this project is open source, you are therefore encourage to contribute
+*Note: This project is open source, and contributions are encouraged.*
 
 ## Application Setup
 
-### Step 1: Install prerequisites
-## Installing Ruby Version Manager(RVM) package
-* RVM is a command-line tool that allows you to easily install, manage, and work with multiple Ruby environments, including interpreters and sets of gems. It supports both UNIX-like systems and Windows (with [Cygwin](https://cygwin.com) or [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/about)).
-  
-Run the following in the terminal or CMD (on Windows)
+## Step 1: Install Prerequisites
 
-``` $ \curl -sSL https://get.rvm.io | bash -s stable ```
+### Installing ASDF
 
-* Restart the terminal or cmd and run command below to check if rvm is installed.
-  
-  ```$ rvm list ``` 
-### Installing ruby via RVM
 
-``` $ rvm install <ruby version> ```
+[ASDF](https://asdf-vm.com/) is a tool capable of managing all runtimes locally. Follow the instructions for installation, especially for Windows WSL users.
 
-* e.g. Ruby Version 3.0.2
+Install dependencies for compiling Ruby:
 
-### Installing Rails via RVM
-
-Since Rails is a gem, which is a standardized format that contains Ruby programs, you can also install various versions of Rails by using the ``` gem ``` command
-
-``` $ gem install rails -v <rails specified version> ```
-
-* e.g. Rails Version 7.0.3
-
-NB: For more installation details, checkout [Installing RVM](https://rvm.io/rvm/install) documentation on the same.
-
-## Installing rbenv
-
-* rbenv is a version control tool for Ruby. It helps you switch between different Ruby versions and make sure that every project you are working on always operates independently on the designated version.
-
-### Usage
-
-You can choose the Ruby version for your project with, for example:
-```sh
-cd myproject
-# choose Ruby version 3.0.2:
-rbenv local 3.0.2
-```
-
-### Installation
-
-On systems with Homebrew package manager, the “Using Package Managers” method is recommended. On other systems, “Git Checkout” might be the easiest way of ensuring that you are always installing the latest version of rbenv.
-
-### Using Package Managers
-
-1. Install rbenv using one of the following approaches.
-
-   #### Homebrew
-   
-   On macOS or Linux, we recommend installing rbenv with [Homebrew](https://brew.sh).
-   
-   ```sh
-   $ brew install rbenv ruby-build
-   ```
-   
-   #### Debian, Ubuntu, and their derivatives
-       
-   >Note that the version of rbenv that is packaged and maintained in the Debian and Ubuntu repositories is _out of date_. To install the latest version, it is recommended to [install rbenv using git](#basic-git).
-   
-   ```sh
-   $ sudo apt install rbenv
-   ```
-   
-   #### Arch Linux and its derivatives
-   
-   Archlinux has an [AUR Package](https://aur.archlinux.org/packages/rbenv/) for
-   rbenv and you can install it from the AUR using the instructions from this
-   [wiki page](https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_and_upgrading_packages).
-
-2. Load rbenv in your shell.
-
-    ```sh
-    # run this and follow the printed instructions:
-    $ rbenv init
-    ```
-
-3. Restart your terminal so your changes take effect.
-
-That's it! You are now ready to [install different ruby versions](#installing-ruby-versions).
-
-### Basic Git
-
-1. Clone rbenv into `~/.rbenv`.
-
-    ```sh
-    $ git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-    ```
-
-2. Configure your shell to load rbenv:
-
-   * For **bash**:
-     
-     _Ubuntu Desktop_ users should configure `~/.bashrc`:
-     ```bash
-     $ echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bashrc
-     ```
-
-     On _other platforms_, bash is usually configured via `~/.bash_profile`:
-     ```bash
-     $ echo 'eval "$(~/.rbenv/bin/rbenv init - bash)"' >> ~/.bash_profile
-     ```
-     
-   * For **Zsh**:
-     ```zsh
-     echo 'eval "$(~/.rbenv/bin/rbenv init - zsh)"' >> ~/.zshrc
-     ```
-3. Restart your shell so that these changes take effect.
-
-### Installing ruby via rbenv
-
-Before attempting to install Ruby, check that [your build environment](https://github.com/rbenv/ruby-build/wiki#suggested-build-environment) has the necessary tools and libraries. Then:
+* macOS: Install Homebrew
 
 ```sh
-# list latest stable versions:
-rbenv install -l
-# list all local versions:
-rbenv install -L
-# install a Ruby version:
-rbenv install 3.0.2
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-All done!
 
-You are now free to proceed to the steps below:
+* Ubuntu/ Windows WSL
+
+```sh
+sudo apt-get update
+sudo apt-get install git-core zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev software-properties-common libffi-dev
+```
+
+2. Installing ASDF version manager
+
+```sh
+cd
+git clone https://github.com/excid3/asdf.git ~/.asdf
+echo '. "$HOME/.asdf/asdf.sh"' >> ~/.zshrc
+echo '. "$HOME/.asdf/completions/asdf.bash"' >> ~/.zshrc
+echo 'legacy_version_file = yes' >> ~/.asdfrc
+exec $SHELL
+```
+
+#### Installing Ruby via ASDF
+Install ASDF plugins.
+
+```sh
+asdf plugin add ruby
+asdf plugin add nodejs
+```
+
+Install Ruby and set the default version by running the following commands:
+
+```sh
+asdf install ruby 3.2.2 
+
+# Set the default Ruby version
+asdf global ruby 3.2.2 
+
+# Update to the latest Rubygems version
+gem update --system
+```
+
+Confirm the default Ruby version matches the version you just installed.
+
+```sh
+which ruby
+#=> /Users/username/.asdf/shims/ruby
+ruby -v
+#=> 3.2.2
+```
+
+Install Node.js for handling Javascript in our Rails app
+
+```sh
+asdf install nodejs 20.9.0
+asdf global nodejs 20.9.0
+
+which node
+#=> /Users/username/.asdf/shims/node
+node -v
+#=> 20.9.0
+
+# Install yarn for Rails jsbundling/cssbundling or webpacker
+npm install -g yarn
+```
+
+To switch to a different Ruby and Node version for a specific project, you can use the following command to set the Ruby or Node version for that project. You should be in the project directory.
+
+```sh
+asdf local ruby <ruby version>  # eg 3.0.2
+asdf local nodejs <nodejs version> # eg 20.9.0
+```
 
 ### Step 2: Create a Fork & Branch
 
-* Create a fork of this repository from main branch
-* Select an issue to work on from the main repository
-* Create a branch name to match the selected issue from the main branch
+1. Create a fork of this repository from the main branch.
+2. Select an issue to work on from the main repository.
+3. Create a branch named after the selected issue from the main branch.
 
-NB: 
- 1. Always make sure your fork is in sync with the main
- 2. All changes you make for the issue will be on this branch
+*Note: Keep your fork in sync with the main repository, and make all changes on this branch.*
 
-### Step 3: Clone & install dependencies
+### Step 3: Clone & Install Dependencies
 
-Run the following command in the terminal 
+```sh
+$ git clone <link to your forked repo>
+$ cd <path to your cloned repo>
+$ bundle install
+```
 
-``` $ git clone <link to you forked repo> ```
+### Step 4: Setup the Database
 
-``` $ cd <path to your cloned repo> ```
+```sh
+$ rails db:create
+$ rails db:migrate
+```
 
-``` $ bundle install ```
+### Step 4: Install Yarn Dependencies
 
-### Step 4: Setup the database
+```sh
+$ yarn install
+```
 
-``` $ rails db:create ```
+### Step 5: Start Server
 
-``` $ rails db:migrate ```
+```sh
+$ ./bin/dev
+```
 
-### Step 4: Install yarn dependancies
+### Step 6: Creating a Pull Request
 
-``` yarn install ```
+1. Make changes locally on your branch.
+2. Push your changes to your branch on GitHub.
+3. Create a pull request to the main branch of the main repository.
 
-### Step 5: Start server
+### Step 7: Merging
 
-```./bin/dev```
-
-### step 6: Creating a pull request
-
-* make changes locally on your branch 
-* push your changes to your branch on github
-* create a pull request to main branch of the main repository
-
-### step 7: Merging
-
-Once your changes are reviewed they will be merged to the main branch
+Once your changes are reviewed, they will be merged into the main branch.
 
 ## Contributing
 
-Thank you for your interest in contributing to the Africa Ruby Community (ARC) Platform! We welcome contributions from developers of all experience levels. 
+Thank you for considering contributing to the Africa Ruby Community (ARC) Platform! We welcome contributions from developers of all experience levels.
 
-  ### Finding Issues to Work On
+### Finding Issues to Work On
 
-  We label our issues to help contributors find ones that match their skills and experience level. Here are some labels you might find helpful:
+We label our issues to help contributors find ones that match their skills and experience level. Here are some labels you might find helpful:
 
+| Difficulty Level | Description | Label |
+| ----------------- | ----------- | ----- |
+| Easy/ Beginner/ Novice | Issues for first-time contributors | ![DifficultyLevelEasy](https://img.shields.io/badge/DifficultyLevelEasy-green.svg?style=for-the-badge) |
+| Very Easy | Simple issues for quick fixes | ![DifficultyLevelVeryEasy](https://img.shields.io/badge/DifficultyLevelVeryEasy-619B16?style=for-the-badge) |
+| Average/ Normal/ Medium/ Standard/ Intermediate | Issues requiring understanding of the codebase | ![DifficultyLevelAverage](https://img.shields.io/badge/DifficultyLevelAverage-DAD22C?style=for-the-badge&color=fbca04) |
+| Hard/ Expert/ Difficult | Issues needing significant time and effort | ![DifficultyLevelHard](https://img.shields.io/badge/DifficultyLevelHard-E1803C?style=for-the-badge&color=d93f0b) |
+| Harder | Very challenging issues requiring advanced knowledge | ![DifficultyLevelHarder](https://img.shields.io/badge/DifficultyLevelHarder-C70039?style=for-the-badge) |
 
-  | Difficulty Level | Description                              | Label    |
-  |------------------|------------------------------------------|----------|
-  | Easy/ Beginner/ Novice | Issues that are ideal for first-time contributors | ![DifficultyLevelEasy](https://img.shields.io/badge/DifficultyLevelEasy-green.svg?style=for-the-badge)|
-  | Very Easy        | Simple issues that can be fixed quickly  | ![DifficultyLevelVeryEasy](https://img.shields.io/badge/DifficultyLevelVeryEasy-619B16?style=for-the-badge)|
-  | Average/ Normal/ Medium/ Standard/ Intermediate          | Issues that require some understanding of the codebase  | ![DifficultyLevelAverage](https://img.shields.io/badge/DifficultyLevelAverage-DAD22C?style=for-the-badge&color=fbca04) |
-  | Hard/ Expert/ Difficult             | Issues that require a significant amount of time and effort | ![DifficultyLevelHard](https://img.shields.io/badge/DifficultyLevelHard-E1803C?style=for-the-badge&color=d93f0b) |
-  | Harder           | Very challenging issues that require advanced knowledge | ![DifficultyLevelHarder](https://img.shields.io/badge/DifficultyLevelHarder-C70039?style=for-the-badge)|
+To find issues:
 
+1. Go to the project's repository on GitHub.
+2. Click on the `Issues` tab.
+3. Use the search bar to filter by labels and keywords.
+4. Read issue descriptions and comments for details.
+5. Leave a comment if you have questions or need help.
 
-  To guide people in searching for issues using these labels, you can provide the following steps:
-
-  1. Go to the project's repository on GitHub.
-  2. Click on the `Issues` tab.
-  3. Use the search bar at the top to search for issues using one or more of the labels listed above.
-  4. You can refine your search by adding additional keywords or filters, such as language, platform, or component.
-  5. Once you find an issue you are interested in working on, read through the description and comments to get a better understanding of the problem and any suggested solutions.
-  6. If you have any questions or need help, leave a comment on the issue and wait for feedback from other contributors or maintainers.
+Happy contributing!
