@@ -9,6 +9,9 @@ The Africa Ruby Community (ARC) Platform is a project aimed at creating a hub fo
 *Note: This project is open source, and contributions are encouraged.*
 
 ## Application Setup
+To follow along, watch this youtube tutorial on how to set up the application step by step on WSL.
+
+[![Application Setup](https://img.youtube.com/vi/-mz76HidnGA/0.jpg)](https://www.youtube.com/watch?v=-mz76HidnGA)
 
 ## Step 1: Install Prerequisites
 
