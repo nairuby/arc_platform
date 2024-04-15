@@ -1,5 +1,5 @@
-<header class="sticky top-0 z-50">
-  <div class="relative bg-white border-b border-red-400">
+<navbar class="sticky top-0 z-50 font-inter">
+  <div class="relative bg-gray-50  border-red-400">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6
   md:justify-start md:space-x-10 lg:px-8">
       <div class="dropdown">
@@ -9,7 +9,7 @@
           </svg>
         </label>
         <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow
-        bg-base-100 rounded-box w-52 md:hidden">
+        bg-base-100 rounded-box w-52 md:hidden ">
           <li><%= link_to 'Home', root_path %></li>
           <li><%= link_to 'About ARC', landing_about_path %></li>
 
@@ -43,40 +43,40 @@
           <%= image_tag('arc_logo_coloured.png', alt: "Community Logo",class: "h-8 w-auto sm:h-7") %>
         <% end %>
       </div>
-      <nav class="hidden space-x-10 md:flex">
+      <nav class="hidden space-x-10 md:flex font-semibold text-gray-800 text-sm py-4">
         <%= link_to 'Home', root_path,
-                    class: "text-sm font-small text-gray-500 hover:text-red-600" %>
+                    class: " hover:text-red-600" %>
         <%= link_to 'About', landing_about_path,
-                    class: "text-sm font-small text-gray-500 hover:text-red-600" %>
+                    class: "hover:text-red-600" %>
 
         <% if FeatureFlag.find_by(name: 'events').try(:enabled) %>
-          <a href="#" class="text-sm font-small text-gray-500 hover:text-red-600">Events</a>
+          <a href="#" class="text-sm font-small hover:text-red-600">Events</a>
         <% end %>
 
         <% if FeatureFlag.find_by(name: 'conferences').try(:enabled) %>
-          <a href="#" class="text-sm font-small text-gray-500 hover:text-red-600">
+          <a href="#" class="hover:text-red-600">
             Conferences
           </a>
         <% end %>
 
         <%= link_to 'Chapters', chapters_path,
-                    class: "text-sm font-small text-gray-500 hover:text-red-600" %>
+                    class: "hover:text-red-600" %>
 
         <% if FeatureFlag.find_by(name: 'projects').try(:enabled) %>
-          <a href="#" class="text-sm font-small text-gray-500 hover:text-red-600">
+          <a href="#" class="hover:text-red-600">
             Projects
           </a>
         <% end %>
-        
+
         <%= link_to 'Learning Materials', landing_learn_path,
-                    class: 'text-sm font-small text-gray-500 hover:text-red-600' %>
+                    class: 'hover:text-red-600' %>
       </nav>
       <% if user_signed_in? %>
 
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
           <% if current_user.organization_admin? %>
             <div class="dropdown dropdown-end">
-              <button class="text-sm font-small text-gray-500 hover:text-red-600">
+              <button class="hover:text-red-600">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                       viewBox="0 0 24 24" fill="none" stroke="currentColor"
                       stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -114,7 +114,7 @@
           <% end %>
 
           <div class="dropdown dropdown-end ml-8">
-            <button class="text-sm font-small text-gray-500 hover:text-red-600">
+            <button class="hover:text-red-600">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
@@ -134,14 +134,8 @@
         </div>
       <% else %>
         <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-          <%= link_to new_user_registration_path do %>
-            <button class="btn btn-sm btn-primary normal-case text-white">Sign up</button>
-          <% end %>
-
-          <%= link_to new_user_session_path,
-                      class: "whitespace-nowrap text-sm font-small text-gray-500
-                      hover:text-red-700 ml-8" do %>
-            Sign in
+          <%= link_to new_user_session_path do %>
+            <button class="border-2 border-red-600 rounded-full py-1 px-3 text-sm flex justify-center items-center normal-case text-red-600 hover:bg-red-600 hover:text-white font-semibold">Sign in</button>
           <% end %>
         </div>
       <% end %>
