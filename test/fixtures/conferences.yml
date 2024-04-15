@@ -1,4 +1,16 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# == Schema Information
+#
+# Table name: conferences
+#
+#  id         :bigint           not null, primary key
+#  end_date   :datetime
+#  location   :string
+#  start_date :datetime
+#  status     :integer          default(0)
+#  title      :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 
 one:
   title: MyString
