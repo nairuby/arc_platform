@@ -1,5 +1,5 @@
 <footer aria-labelledby="footer-heading">
-  <div class="flex pt-32">
+  <div class="flex sm:flex-row flex-col pt-32 gap-4">
     <div class="basis-2/6">
       <%= link_to root_path, class: "justify-end pr-20" do %>
         <%= image_tag('arc_dark_gray_logo.png', alt: "Community Logo", class: 'w-20 md:w-48') %>
@@ -28,7 +28,7 @@
             <% end %>
           </ul>
         </div>
-        <div class="place-self-center">
+        <div class="sm:place-self-center">
           <ul>
             <li><%= link_to 'Sponsor', 'mailto:organisers@rubycommunity.africa' %></li>
 
@@ -51,8 +51,8 @@
     </div>
 
     <div class="basis-1/6 text-sm">
-      <ul>
-        <li><b>Connect</b></li>
+      <p><b>Connect</b></p>
+      <ul class="flex sm:flex-col flex-row mt-4">
         <li>
           <%= link_to 'https://twitter.com/ruby_african' do %>
             <div class="inline-flex text-sm">
