@@ -17,10 +17,6 @@
             <li><a href="#">Events</a></li>
           <% end %>
 
-          <% if FeatureFlag.find_by(name: 'conferences').try(:enabled) %>
-            <li><a href="#">Conferences</a></li>
-          <% end %>
-
           <li><%= link_to 'Chapters', chapters_path %></li>
 
           <% if FeatureFlag.find_by(name: 'projects').try(:enabled) %>

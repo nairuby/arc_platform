@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :conferences
   authenticate :user do
     mount Motor::Admin => '/admin'
   end

@@ -1,9 +1,3 @@
-<% if FeatureFlag.find_by(name: 'conference').try(:enabled) %>
-  <% if Conference.current.present? %>
-    <%= render 'landing/home/conference' %>
-  <% end %>
-<% end %>
-
 <%= render 'landing/home/intro' %>
 
 <% if FeatureFlag.find_by(name: 'events').try(:enabled) %>

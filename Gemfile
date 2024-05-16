@@ -49,16 +49,12 @@ end
 group :development do
   gem 'annotate', '~> 3.2'
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem 'web-console'
-
-  gem 'dockerfile-rails', '>= 1.2', group: :development
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-  gem 'letter_opener'
 
   # Capistrano - deployment gems
   gem 'capistrano', '~> 3.11'
@@ -69,10 +65,6 @@ group :development do
   gem 'capistrano-webpacker-precompile', require: false
   gem 'dockerfile-rails', '>= 1.2'
   gem 'letter_opener'
-  gem 'web-console' # Use console on exceptions pages [https://github.com/rails/web-console]
-
-  # gem "rack-mini-profiler" # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
-  # gem "spring" #Speed up commands on slow machines / big apps [https://github.com/rails/spring]
 end
 
 group :test do
