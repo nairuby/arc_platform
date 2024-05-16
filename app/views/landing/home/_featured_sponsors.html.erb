@@ -1,17 +1,27 @@
+<% featured_sponsors = [
+  {
+    image:'sponsors/current/nairobits.png',
+    link: 'https://www.nairobits.com/',
+    alt:'Nairobits'
+  },
+  {
+    image: 'sponsors/current/finplus.png',
+    link: 'https://finplusgroup.com',
+    alt: 'Finplus Group'
+  }
+
+] %>
+
 <h1 class="pt-16 text-4xl text-red-600 font-bold text-center">
   Featured Sponsors
 </h1>
 
-<div class="grid grid-flow-col  gap-2 px-20 place-content-center">
-  <%= link_to 'https://www.nairobits.com/', target: '_blank' do %>
-    <div class="items-center justify-center w-36 h-40 card place-items-center">
-      <%= image_tag 'sponsors/current/nairobits.png', alt: "Nairobits" %>
-    </div>
-  <% end %>
-
-  <%= link_to 'https://finplusgroup.com/', target: '_blank' do %>
-    <div class="items-center justify-center w-36 h-40 card place-items-center">
-      <%= image_tag 'sponsors/current/finplus.png', alt: 'Finplus Group' %>
-    </div>
+<div class="grid md:grid-flow-col  gap-2 px-20 place-content-center">
+  <% featured_sponsors.each do |sponsor| %>
+    <%= link_to sponsor[:link], target: '_blank' do %>
+      <div class="items-center justify-center w-36 h-40 card place-items-center">
+        <%= image_tag sponsor[:image], alt: sponsor[:alt] %>
+      </div>
+    <% end %>
   <% end %>
 </div>
