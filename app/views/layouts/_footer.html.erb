@@ -40,10 +40,10 @@
 
 
 
-<footer aria-labelledby="footer-heading" class="pt-32 px-20 lg:ml-20">
-  <div class="grid md:grid-cols-3 gap-4">
+<footer aria-labelledby="footer-heading" class="md:pt-32 pt-24 px-20 lg:ml-20">
+  <div class="grid md:grid-cols-3 md:gap-4 gap-12 justify-center items-center">
     <%= link_to root_path, class: "justify-end pr-20" do %>
-      <%= image_tag('arc_logo_coloured.png', alt: "Community Logo", class: 'w-20 md:w-48') %>
+      <%= image_tag('arc_logo_coloured.png', alt: "Community Logo", class: 'w-32 md:w-48') %>
     <% end %>
 
     <ul class="flex flex-col gap-3">
@@ -84,16 +84,16 @@
     </ul>
   </div>
 
-  <div class="flex flex-col justify-center items-center pt-10">
-      <h1 class="pt-4 pb-12 text-4xl text-red-600 font-bold text-center">
-        Connect with the community
+  <div class="flex flex-col justify-center items-center pt-12">
+      <h1 class="pt-4 pb-12 md:text-4xl text-2xl text-red-600 font-bold text-center">
+        Connect
       </h1>
-      <ul class="flex flex-row mt-4 gap-10">
+      <ul class="flex md:flex-row flex-col md:mt-4 md:gap-10 gap-5">
         <% socials.each do |social| %>
           <% if social[:show] === true %>
-            <li class='border-2 border-red-600 p-5 rounded-full'>
+            <li class='md:border-2 border-red-600 p-5 rounded-full'>
               <%= link_to social[:link] do %>
-                <%= image_tag social[:image], alt: social[:alt], class: "w-5 hover:scale-105" %>
+                <%= image_tag social[:image], alt: social[:alt], class: "md:w-5 w-8 hover:scale-105" %>
               <% end %>
             </li>
           <% end %>
