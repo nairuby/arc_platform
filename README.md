@@ -9,9 +9,11 @@ The Africa Ruby Community (ARC) Platform is a project aimed at creating a hub fo
 *Note: This project is open source, and contributions are encouraged.*
 
 ## Application Setup
-To follow along, watch this youtube tutorial on how to set up the application step by step on WSL.
+- To follow along, watch this youtube tutorial on how to set up the application step by step on WSL.
 
 [![Application Setup](https://img.youtube.com/vi/-mz76HidnGA/0.jpg)](https://www.youtube.com/watch?v=-mz76HidnGA)
+
+- [Old README](./README.md): `rvm` and `rvenv` users
 
 ## Step 1: Install Prerequisites
 
@@ -64,6 +66,12 @@ asdf global ruby 3.2.2
 
 # Update to the latest Rubygems version
 gem update --system
+```
+
+Install foreman gem
+
+```shell
+gem install foreman
 ```
 
 Confirm the default Ruby version matches the version you just installed.
