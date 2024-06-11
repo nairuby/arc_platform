@@ -27,7 +27,7 @@ module ChaptersHelper
     { image: 'sponsors/current/friendly_rb.jpg', link: 'https://friendlyrb.com/', alt: 'FriendlyRB' },
     { image: 'sponsors/current/microverse.png', link: 'https://www.microverse.org/', alt: 'Microverse' },
     { image: 'sponsors/current/kca.png', link: 'https://www.kcau.ac.ke', alt: 'KCA University' },
-  { image: 'sponsors/current/nairobits.png', link: 'https://www.nairobits.com/', alt: 'Nairobits' }
+    { image: 'sponsors/current/nairobits.png', link: 'https://www.nairobits.com/', alt: 'Nairobits' }
   ].freeze
 
   PREVIOUS_SPONSORS = [
