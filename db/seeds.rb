@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'faker'
 
 # frozen_string_literal: true
@@ -11,11 +13,11 @@ require 'faker'
 
 ## User Seeds for local dev testing and setup.
 
-LOCATIONS = ["Nairobi", "Mombasa",    # Kenya
-          "Kampala", "Entebbe",       # Uganda
-          "Dar es Salaam", "Arusha",  # Tanzania
-          "Bujumbura", "Gitega",      # Burundi
-          "Kigali", "Butare"]         # Rwanda
+LOCATIONS = ['Nairobi', 'Mombasa', # Kenya
+             'Kampala', 'Entebbe',       # Uganda
+             'Dar es Salaam', 'Arusha',  # Tanzania
+             'Bujumbura', 'Gitega',      # Burundi
+             'Kigali', 'Butare'].freeze         # Rwanda
 
 def build_user
   user = User.new
@@ -34,16 +36,15 @@ end
 def build_country
   country = Country.new
 
-  country.name = %w(Kenya Uganda Tanzania Rwanda Burundi).sample
+  country.name = %w[Kenya Uganda Tanzania Rwanda Burundi].sample
 
   country.save if country.valid?
 end
 
-
 def build_chapter
   chapter = Chapter.new
 
-  chapter.name = ["#{Faker::Name.middle_name}", "Chapter"].join(" ")
+  chapter.name = [Faker::Name.middle_name.to_s, 'Chapter'].join(' ')
   chapter.country = Country.all.sample
   chapter.location = LOCATIONS.sample
   chapter.description = "The East African chapter in #{chapter.location}"
@@ -51,11 +52,7 @@ def build_chapter
   chapter.save if chapter.valid?
 end
 
-users = []
-countries = []
-chpaters = []
-
-10.times do 
+10.times do
   build_user
 end
 
