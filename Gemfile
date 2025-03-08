@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+ruby '3.4.1'
 
 gem 'active_storage_validations', '~> 1.0' # Active Storage gems for validating attachments https://github.com/igorkasyanchuk/active_storage_validations
 gem 'aws-sdk-s3', '~> 1.119', require: false # Official AWS Ruby gem for Amazon S3
@@ -21,7 +21,7 @@ gem 'motor-admin', '~> 0.4.7'
 gem 'pg', '~> 1.1' # Use postgresql as the database for Active Record
 gem 'premailer-rails', '~> 1.12' # This gem is a drop in solution for styling HTML emails with CSS
 gem 'puma', '~> 5.0' # Use the Puma web server [https://github.com/puma/puma]
-gem 'rails', '~> 7.0.3' # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem 'rails', '~> 7.2.2.1' # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'redis', '~> 4.0' # Use Redis adapter to run Action Cable in production
 # An ActionMailer adapter to send email using SendGrid's HTTPS Web API (instead of SMTP).
 gem 'sendgrid-actionmailer', '~> 3.2'
