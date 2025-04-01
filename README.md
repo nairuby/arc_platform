@@ -13,6 +13,28 @@ The Africa Ruby Community (ARC) Platform is a project aimed at creating a hub fo
 *Note: This project is open source, and contributions are encouraged.*
 
 ## Application Setup
+
+### Dev Containers
+
+#### Prerequisites
+- Docker Desktop
+- VS Code with Dev Containers extension
+
+#### Setup
+1. Open project in VS Code
+2. Click green "><" icon in bottom-left corner
+3. Select "Reopen in Container"
+
+## First Run
+- Initial build may take several minutes
+- All dependencies will be installed automatically
+
+## Running Rails
+```bash
+bundle exec rails server -b 0.0.0.0
+```
+Access app at `http://localhost:3000`
+
 - To follow along, watch this youtube tutorial on how to set up the application step by step on WSL.
 
 [![Application Setup](https://img.youtube.com/vi/-mz76HidnGA/0.jpg)](https://www.youtube.com/watch?v=-mz76HidnGA)
@@ -29,7 +51,7 @@ The Africa Ruby Community (ARC) Platform is a project aimed at creating a hub fo
 Install dependencies for compiling Ruby:
 
 * macOS: Install Homebrew
-
+ 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
