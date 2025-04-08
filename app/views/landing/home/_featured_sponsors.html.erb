@@ -23,7 +23,7 @@
     <% featured_sponsors.each do |sponsor| %>
       <%= link_to sponsor[:link], target: '_blank' do %>
         <div class="flex items-center justify-center w-full">
-          <div class="w-36 h-36 card flex items-center justify-center overflow-hidden">
+          <div class="min-w-[8rem] min-h-[8rem] max-w-[9rem] max-h-[9rem] lg:max-w-[8rem] lg:max-h-[8rem] xl:max-w-[12rem] xl:max-h-[12rem] card flex items-center justify-center overflow-hidden">
             <%= image_tag sponsor[:image], alt: sponsor[:alt], class: 'w-full h-full object-contain' %>
           </div>
         </div>
