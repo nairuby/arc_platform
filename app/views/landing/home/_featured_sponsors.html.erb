@@ -19,12 +19,12 @@
     Featured Sponsors
   </h1>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-2 lg:ml-28">
+  <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 px-20 place-content-center">
     <% featured_sponsors.each do |sponsor| %>
       <%= link_to sponsor[:link], target: '_blank' do %>
         <div class="flex items-center justify-center w-full">
-          <div class="w-36 h-40 card">
-            <%= image_tag sponsor[:image], alt: sponsor[:alt] %>
+          <div class="w-36 h-36 card flex items-center justify-center overflow-hidden">
+            <%= image_tag sponsor[:image], alt: sponsor[:alt], class: 'w-full h-full object-contain' %>
           </div>
         </div>
       <% end %>
