@@ -18,14 +18,14 @@ module ChaptersHelper
 
   FEATURED_SPONSORS = [
     { image: 'sponsors/current/solutech_official.svg', link: 'https://solutech.co.ke', alt: 'Solutech' },
-    { image: 'sponsors/current/finplus.png', link: 'https://finplusgroup.com', alt: 'Finplus Group' },
+    { image: 'sponsors/current/microverse.png', link: 'https://www.microverse.org/', alt: 'Microverse' },
     { image: 'sponsors/current/app_signal.png', link: 'https://www.appsignal.com', alt: 'App Signal' },
     { image: 'sponsors/current/ruby_central.png', link: 'https://rubycentral.org/', alt: 'Ruby Central' },
 
     { image: 'sponsors/current/kopo_kopo.png', link: 'https://kopokopo.co.ke', alt: 'Kopo Kopo' },
+    { image: 'sponsors/current/finplus.png', link: 'https://finplusgroup.com', alt: 'Finplus Group' },
     { image: 'sponsors/current/planet_argon.png', link: 'https://www.planetargon.com', alt: 'Planet Argon' },
     { image: 'sponsors/current/friendly_rb.jpg', link: 'https://friendlyrb.com/', alt: 'FriendlyRB' },
-    { image: 'sponsors/current/microverse.png', link: 'https://www.microverse.org/', alt: 'Microverse' },
     { image: 'sponsors/current/kca.png', link: 'https://www.kcau.ac.ke', alt: 'KCA University' },
     { image: 'sponsors/current/nairobits.png', link: 'https://www.nairobits.com/', alt: 'Nairobits' }
   ].freeze

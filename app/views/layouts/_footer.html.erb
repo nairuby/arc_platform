@@ -1,6 +1,6 @@
-<footer aria-labelledby="footer-heading" class="md:pt-32 pt-24 px-20 lg:ml-20">
-  <div class="grid md:grid-cols-3 md:gap-4 gap-12 justify-center items-center">
-    <%= link_to root_path, class: "justify-end pr-20" do %>
+<footer aria-labelledby="footer-heading" class="md:pt-32 pt-24 px-8 md:px-20 lg:ml-20">
+  <div class="grid md:grid-cols-3 gap-12 justify-center items-center text-center md:text-left">
+    <%= link_to root_path, class: "flex justify-center md:justify-end md:pr-20" do %>
       <%= image_tag('arc_logo_coloured.png', alt: "Community Logo", class: 'w-32 md:w-48') %>
     <% end %>
 
@@ -55,5 +55,5 @@
       </ul>
   </div>
 
-  <p class="text-center pt-10 pb-10">All Rights Reserved. Copyright <%= Date.today.year %></p>
+  <p class="text-center pt-10 pb-10">All Rights Reserved. African Ruby Community. Copyright <%= Date.today.year %></p>
 </footer>
