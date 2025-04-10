@@ -8,8 +8,8 @@
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2
     xl:grid-cols-3 gap-1 gap-y-20 mx-auto place-items-center">
     <% @chapters.each do |chapter| %>
-      <div class="chapter-grid grid flex-grow w-45 h-48 card rounded-box
-        place-items-center">
+      <div class="chapter-grid grid grid-rows-[auto,auto] flex-grow w-45 min-h-48 card rounded-box
+        place-items-center overflow-visible">
         <%= image_tag chapter.image.attached? ? chapter.image.url : image_path('chapter.jpg'),
                       alt: chapter.name,
                       class: "rounded-lg rounded-tl-2xl"
