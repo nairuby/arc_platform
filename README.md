@@ -1,4 +1,4 @@
-# ⚠️⚠️⚠️ THIS REPO HAS BEEN MOVED TO [THE OFFICIAL ARC ORGANIZATION](https://github.com/African-Ruby-Community/arc_platform) ⚠️⚠️⚠️
+# ⚠️⚠️⚠️ THIS REPO HAS BEEN MOVED: [NEW LINK](https://github.com/African-Ruby-Community/arc_platform) ⚠️⚠️⚠️
 
 # Africa Ruby Community (ARC) Platform
 
