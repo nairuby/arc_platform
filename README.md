@@ -1,3 +1,5 @@
+# ⚠️⚠️⚠️ THIS REPO HAS BEEN MOVED TO [THE OFFICIAL ARC ORGANIZATION](https://github.com/African-Ruby-Community/arc_platform) ⚠️⚠️⚠️
+
 # Africa Ruby Community (ARC) Platform
 
 [![Arc Platform CI Workflow](https://github.com/nairuby/arc_platform/actions/workflows/ci.yml/badge.svg)](https://github.com/nairuby/arc_platform/actions/workflows/ci.yml)
@@ -51,7 +53,7 @@ Access app at `http://localhost:3000`
 Install dependencies for compiling Ruby:
 
 * macOS: Install Homebrew
- 
+
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
@@ -85,10 +87,10 @@ asdf plugin add nodejs
 Install Ruby and set the default version by running the following commands:
 
 ```sh
-asdf install ruby 3.4.1 
+asdf install ruby 3.4.1
 
 # Set the default Ruby version
-asdf global ruby 3.4.1 
+asdf global ruby 3.4.1
 
 # Update to the latest Rubygems version
 gem update --system
